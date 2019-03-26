@@ -1,0 +1,3 @@
+mutation removeOrg($id: ID!) {
+    removeOrg(id: $id)
+}

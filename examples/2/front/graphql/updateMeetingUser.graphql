@@ -1,0 +1,3 @@
+mutation updateMeetingUser($id: ID!) {
+    updateMeetingUser(id: $id)
+}

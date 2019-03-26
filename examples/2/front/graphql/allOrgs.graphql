@@ -1,0 +1,26 @@
+query allOrgs($page: Int, $perPage: Int, $sortField: String, $sortOrder: String, $filter: OrgFilter) {
+    allOrgs(page: $page, perPage: $perPage, sortField: $sortField, sortOrder: $sortOrder, filter: $filter) {
+        list {
+            id
+            org_name
+            parentOrg_id
+            parentOrg {
+                id
+                org_name
+                parentOrg_id
+            }
+            subOrgs {
+                id
+                org_name
+                parentOrg_id
+            }
+            users {
+                id
+                name
+                org_id
+            }
+        }
+        total
+        pages
+    }
+}

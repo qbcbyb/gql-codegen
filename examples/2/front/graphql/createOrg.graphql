@@ -1,0 +1,3 @@
+mutation createOrg($id: ID) {
+    createOrg(id: $id)
+}

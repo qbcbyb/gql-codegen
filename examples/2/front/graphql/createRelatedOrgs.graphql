@@ -1,0 +1,3 @@
+mutation createRelatedOrgs($id: ID, $parentOrg: OrgInput) {
+    createRelatedOrgs(id: $id, parentOrg: $parentOrg)
+}

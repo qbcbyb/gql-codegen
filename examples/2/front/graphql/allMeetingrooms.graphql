@@ -1,0 +1,29 @@
+query allMeetingrooms($page: Int, $perPage: Int, $sortField: String, $sortOrder: String, $filter: MeetingroomFilter) {
+    allMeetingrooms(page: $page, perPage: $perPage, sortField: $sortField, sortOrder: $sortOrder, filter: $filter) {
+        list {
+            id
+            room_name
+            area
+            capacity
+            room_address
+            facility
+            photos
+            status
+            meetings {
+                id
+                meeting_title
+                meeting_time
+                meeting_type
+                meetingroom_id
+                organizer
+                sponsor
+                meeting_content
+                notifi
+                warn
+                meeting_status
+            }
+        }
+        total
+        pages
+    }
+}

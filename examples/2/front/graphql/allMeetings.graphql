@@ -1,0 +1,53 @@
+query allMeetings($page: Int, $perPage: Int, $sortField: String, $sortOrder: String, $filter: MeetingFilter) {
+    allMeetings(page: $page, perPage: $perPage, sortField: $sortField, sortOrder: $sortOrder, filter: $filter) {
+        list {
+            id
+            meeting_title
+            meeting_time
+            meeting_type
+            meetingroom_id
+            organizer
+            sponsor
+            meeting_content
+            notifi
+            warn
+            meeting_status
+            attachment {
+                id
+                fileName
+                fullPath
+                thumbnail
+                mimetype
+            }
+            attachments {
+                id
+                fileName
+                fullPath
+                thumbnail
+                mimetype
+            }
+            meetingroom {
+                id
+                room_name
+                area
+                capacity
+                room_address
+                facility
+                photos
+                status
+            }
+            meetingUsers {
+                id
+                meeting_id
+                user_id
+            }
+            relatedUsers {
+                id
+                name
+                org_id
+            }
+        }
+        total
+        pages
+    }
+}

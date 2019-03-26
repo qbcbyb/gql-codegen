@@ -1,0 +1,10 @@
+mutation updateMeetingroom(
+    $id: ID!
+    $area: String
+    $capacity: String
+    $facility: [String]
+    $photos: [String]
+    $status: Boolean
+) {
+    updateMeetingroom(id: $id, area: $area, capacity: $capacity, facility: $facility, photos: $photos, status: $status)
+}

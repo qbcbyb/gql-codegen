@@ -1,0 +1,17 @@
+mutation createRelatedMeetings(
+    $id: ID
+    $organizer: String
+    $sponsor: String
+    $notifi: [String]
+    $warn: [String]
+    $meetingroom: MeetingroomInput
+) {
+    createRelatedMeetings(
+        id: $id
+        organizer: $organizer
+        sponsor: $sponsor
+        notifi: $notifi
+        warn: $warn
+        meetingroom: $meetingroom
+    )
+}

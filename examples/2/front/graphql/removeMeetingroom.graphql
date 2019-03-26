@@ -1,0 +1,3 @@
+mutation removeMeetingroom($id: ID!) {
+    removeMeetingroom(id: $id)
+}

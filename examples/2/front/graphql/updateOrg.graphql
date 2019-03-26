@@ -1,0 +1,3 @@
+mutation updateOrg($id: ID!) {
+    updateOrg(id: $id)
+}

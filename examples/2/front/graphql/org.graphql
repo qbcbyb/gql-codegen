@@ -1,0 +1,75 @@
+query org($id: ID!) {
+    org(id: $id) {
+        id
+        org_name
+        parentOrg_id
+        parentOrg {
+            id
+            org_name
+            parentOrg_id
+            parentOrg {
+                id
+                org_name
+                parentOrg_id
+            }
+            subOrgs {
+                id
+                org_name
+                parentOrg_id
+            }
+            users {
+                id
+                name
+                org_id
+            }
+        }
+        subOrgs {
+            id
+            org_name
+            parentOrg_id
+            parentOrg {
+                id
+                org_name
+                parentOrg_id
+            }
+            subOrgs {
+                id
+                org_name
+                parentOrg_id
+            }
+            users {
+                id
+                name
+                org_id
+            }
+        }
+        users {
+            id
+            name
+            org_id
+            meetingUsers {
+                id
+                meeting_id
+                user_id
+            }
+            relatedMeetings {
+                id
+                meeting_title
+                meeting_time
+                meeting_type
+                meetingroom_id
+                organizer
+                sponsor
+                meeting_content
+                notifi
+                warn
+                meeting_status
+            }
+            org {
+                id
+                org_name
+                parentOrg_id
+            }
+        }
+    }
+}

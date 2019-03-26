@@ -1,0 +1,3 @@
+mutation createMeetingUser($id: ID) {
+    createMeetingUser(id: $id)
+}

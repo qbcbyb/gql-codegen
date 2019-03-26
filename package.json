@@ -1,0 +1,50 @@
+{
+    "name": "gql-codegen",
+    "version": "0.0.1",
+    "description": "Generate GraphQL code by mock.js or database",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "tsc --watch --sourceMap",
+        "prepublish": "rm -rf lib && tsc"
+    },
+    "keywords": [
+        "grqphql",
+        "codegenerator"
+    ],
+    "author": "Hydrant",
+    "license": "ISC",
+    "files": [
+        "*.md",
+        "lib",
+        "template",
+        ".prettierrc.js"
+    ],
+    "bin": {
+        "gql-codegen": "lib/cmd.js"
+    },
+    "devDependencies": {
+        "apollo-server-express": "^2.4.8",
+        "express": "^4.16.4",
+        "handlebars": "^4.0.12",
+        "prettier": "^1.15.2",
+        "sqlite": "^3.0.2",
+        "sqlite-parser": "^1.0.1",
+        "typescript": "^3.3.3333"
+    },
+    "dependencies": {
+        "@types/graphql": "^14.0.7",
+        "apollo-server-core": "^2.4.8",
+        "apollo-server-errors": "^2.2.1",
+        "form-data": "^2.3.3",
+        "graphql": "^14.0.2",
+        "graphql-bigint": "^1.0.0",
+        "graphql-import": "^0.7.1",
+        "graphql-tools": "^4.0.3",
+        "graphql-type-json": "^0.2.1",
+        "inflection": "^1.12.0",
+        "mkdirp": "^0.5.1",
+        "node-fetch": "^2.3.0",
+        "shortid": "^2.2.14"
+    }
+}

@@ -1,0 +1,34 @@
+query allUsers($page: Int, $perPage: Int, $sortField: String, $sortOrder: String, $filter: UserFilter) {
+    allUsers(page: $page, perPage: $perPage, sortField: $sortField, sortOrder: $sortOrder, filter: $filter) {
+        list {
+            id
+            name
+            org_id
+            meetingUsers {
+                id
+                meeting_id
+                user_id
+            }
+            relatedMeetings {
+                id
+                meeting_title
+                meeting_time
+                meeting_type
+                meetingroom_id
+                organizer
+                sponsor
+                meeting_content
+                notifi
+                warn
+                meeting_status
+            }
+            org {
+                id
+                org_name
+                parentOrg_id
+            }
+        }
+        total
+        pages
+    }
+}

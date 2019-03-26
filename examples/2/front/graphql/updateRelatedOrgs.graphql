@@ -1,0 +1,3 @@
+mutation updateRelatedOrgs($id: ID, $parentOrg: OrgInput) {
+    updateRelatedOrgs(id: $id, parentOrg: $parentOrg)
+}

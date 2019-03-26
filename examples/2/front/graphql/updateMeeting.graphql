@@ -1,0 +1,3 @@
+mutation updateMeeting($id: ID!, $organizer: String, $sponsor: String, $notifi: [String], $warn: [String]) {
+    updateMeeting(id: $id, organizer: $organizer, sponsor: $sponsor, notifi: $notifi, warn: $warn)
+}

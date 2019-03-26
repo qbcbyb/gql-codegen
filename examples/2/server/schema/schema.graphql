@@ -1,0 +1,375 @@
+"""
+Date type
+"""
+scalar Date
+
+type File {
+    id: ID
+    fileName: String
+    fullPath: String
+    thumbnail: String
+    mimetype: String
+}
+
+type Meeting {
+    id: ID!
+    meeting_title: String
+    meeting_time: Date
+    meeting_type: Int
+    meetingroom_id: ID
+    organizer: String
+    sponsor: String
+    meeting_content: String
+    notifi: [String]
+    warn: [String]
+    meeting_status: String
+    attachment: File
+    attachments: [File]
+    meetingroom: Meetingroom
+    meetingUsers: [MeetingUser]
+    relatedUsers: [User]
+}
+
+input MeetingFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    meeting_title: String
+    meeting_time: Date
+    meeting_type: Int
+    meetingroom_id: ID
+    organizer: String
+    sponsor: String
+    meeting_content: String
+    notifi: [String]
+    warn: [String]
+    meeting_status: String
+    attachment: Upload
+    attachments: [Upload]
+    meeting_time_lt: Date
+    meeting_time_lte: Date
+    meeting_time_gt: Date
+    meeting_time_gte: Date
+    meeting_type_lt: Int
+    meeting_type_lte: Int
+    meeting_type_gt: Int
+    meeting_type_gte: Int
+}
+
+input MeetingInput {
+    id: ID
+    meeting_title: String
+    meeting_time: Date
+    meeting_type: Int
+    meetingroom_id: ID
+    organizer: String
+    sponsor: String
+    meeting_content: String
+    notifi: [String]
+    warn: [String]
+    meeting_status: String
+    attachment: Upload
+    attachments: [Upload]
+}
+
+type MeetingPage {
+    list: [Meeting]
+    total: Int
+    pages: Int
+}
+
+type Meetingroom {
+    id: ID!
+    room_name: String
+    area: String
+    capacity: String
+    room_address: String
+    facility: [String]
+    photos: [String]
+    status: Boolean
+    meetings: [Meeting]
+}
+
+input MeetingroomFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    room_name: String
+    area: String
+    capacity: String
+    room_address: String
+    facility: [String]
+    photos: [String]
+    status: Boolean
+}
+
+input MeetingroomInput {
+    id: ID
+    room_name: String
+    area: String
+    capacity: String
+    room_address: String
+    facility: [String]
+    photos: [String]
+    status: Boolean
+}
+
+type MeetingroomPage {
+    list: [Meetingroom]
+    total: Int
+    pages: Int
+}
+
+type MeetingUser {
+    id: ID!
+    meeting_id: ID
+    user_id: ID
+    meeting: Meeting
+    user: User
+}
+
+input MeetingUserFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    meeting_id: ID
+    user_id: ID
+}
+
+input MeetingUserInput {
+    id: ID
+    meeting_id: ID
+    user_id: ID
+}
+
+type MeetingUserPage {
+    list: [MeetingUser]
+    total: Int
+    pages: Int
+}
+
+type Mutation {
+    createMeetingroom(
+        id: ID
+        room_name: String
+        area: String
+        capacity: String
+        room_address: String
+        facility: [String]
+        photos: [String]
+        status: Boolean
+    ): ID
+    batchCreateMeetingrooms(meetingrooms: [MeetingroomInput]): [ID]
+    updateMeetingroom(
+        id: ID!
+        room_name: String
+        area: String
+        capacity: String
+        room_address: String
+        facility: [String]
+        photos: [String]
+        status: Boolean
+    ): Boolean
+    batchUpdateMeetingrooms(meetingrooms: [MeetingroomInput]): [ID]
+    removeMeetingroom(id: ID!): Boolean
+    batchRemoveMeetingrooms(meetingroomIds: [ID!]): [ID]
+    createRelatedMeetings(
+        id: ID
+        meeting_title: String
+        meeting_time: Date
+        meeting_type: Int
+        meetingroom_id: ID
+        organizer: String
+        sponsor: String
+        meeting_content: String
+        notifi: [String]
+        warn: [String]
+        meeting_status: String
+        attachment: Upload
+        attachments: [Upload]
+        meetingroom: MeetingroomInput
+    ): [ID]
+    updateRelatedMeetings(
+        id: ID
+        meeting_title: String
+        meeting_time: Date
+        meeting_type: Int
+        meetingroom_id: ID
+        organizer: String
+        sponsor: String
+        meeting_content: String
+        notifi: [String]
+        warn: [String]
+        meeting_status: String
+        attachment: Upload
+        attachments: [Upload]
+        meetingroom: MeetingroomInput
+    ): [ID]
+    createMeeting(
+        id: ID
+        meeting_title: String
+        meeting_time: Date
+        meeting_type: Int
+        meetingroom_id: ID
+        organizer: String
+        sponsor: String
+        meeting_content: String
+        notifi: [String]
+        warn: [String]
+        meeting_status: String
+        attachment: Upload
+        attachments: [Upload]
+    ): ID
+    batchCreateMeetings(meetings: [MeetingInput]): [ID]
+    updateMeeting(
+        id: ID!
+        meeting_title: String
+        meeting_time: Date
+        meeting_type: Int
+        meetingroom_id: ID
+        organizer: String
+        sponsor: String
+        meeting_content: String
+        notifi: [String]
+        warn: [String]
+        meeting_status: String
+        attachment: Upload
+        attachments: [Upload]
+    ): Boolean
+    batchUpdateMeetings(meetings: [MeetingInput]): [ID]
+    removeMeeting(id: ID!): Boolean
+    batchRemoveMeetings(meetingIds: [ID!]): [ID]
+    createRelatedMeetingUsers(
+        id: ID
+        meeting_id: ID
+        user_id: ID
+        meeting: MeetingInput
+        user: UserInput
+        meeting_ids: [ID]
+        user_ids: [ID]
+    ): [ID]
+    updateRelatedMeetingUsers(
+        id: ID
+        meeting_id: ID
+        user_id: ID
+        meeting: MeetingInput
+        user: UserInput
+        meeting_ids: [ID]
+        user_ids: [ID]
+    ): [ID]
+    createMeetingUser(id: ID, meeting_id: ID, user_id: ID): ID
+    batchCreateMeetingUsers(meetingUsers: [MeetingUserInput]): [ID]
+    updateMeetingUser(id: ID!, meeting_id: ID, user_id: ID): Boolean
+    batchUpdateMeetingUsers(meetingUsers: [MeetingUserInput]): [ID]
+    removeMeetingUser(id: ID!): Boolean
+    batchRemoveMeetingUsers(meetingUserIds: [ID!]): [ID]
+    createRelatedOrgs(id: ID, org_name: String, parentOrg_id: ID, parentOrg: OrgInput): [ID]
+    updateRelatedOrgs(id: ID, org_name: String, parentOrg_id: ID, parentOrg: OrgInput): [ID]
+    createOrg(id: ID, org_name: String, parentOrg_id: ID): ID
+    batchCreateOrgs(orgs: [OrgInput]): [ID]
+    updateOrg(id: ID!, org_name: String, parentOrg_id: ID): Boolean
+    batchUpdateOrgs(orgs: [OrgInput]): [ID]
+    removeOrg(id: ID!): Boolean
+    batchRemoveOrgs(orgIds: [ID!]): [ID]
+    createRelatedUsers(id: ID, name: String, org_id: ID, org: OrgInput): [ID]
+    updateRelatedUsers(id: ID, name: String, org_id: ID, org: OrgInput): [ID]
+    createUser(id: ID, name: String, org_id: ID): ID
+    batchCreateUsers(users: [UserInput]): [ID]
+    updateUser(id: ID!, name: String, org_id: ID): Boolean
+    batchUpdateUsers(users: [UserInput]): [ID]
+    removeUser(id: ID!): Boolean
+    batchRemoveUsers(userIds: [ID!]): [ID]
+}
+
+type Org {
+    id: ID!
+    org_name: String
+    parentOrg_id: ID
+    parentOrg: Org
+    subOrgs: [Org]
+    users: [User]
+}
+
+input OrgFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    org_name: String
+    parentOrg_id: ID
+}
+
+input OrgInput {
+    id: ID
+    org_name: String
+    parentOrg_id: ID
+}
+
+type OrgPage {
+    list: [Org]
+    total: Int
+    pages: Int
+}
+
+type Query {
+    meetingroom(id: ID!): Meetingroom
+    allMeetingrooms(
+        page: Int
+        perPage: Int
+        sortField: String
+        sortOrder: String
+        filter: MeetingroomFilter
+    ): MeetingroomPage
+    nonPaginationMeetingrooms(sortField: String, sortOrder: String, filter: MeetingroomFilter): [Meetingroom]
+    meeting(id: ID!): Meeting
+    allMeetings(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: MeetingFilter): MeetingPage
+    nonPaginationMeetings(sortField: String, sortOrder: String, filter: MeetingFilter): [Meeting]
+    meetingUser(id: ID!): MeetingUser
+    allMeetingUsers(
+        page: Int
+        perPage: Int
+        sortField: String
+        sortOrder: String
+        filter: MeetingUserFilter
+    ): MeetingUserPage
+    nonPaginationMeetingUsers(sortField: String, sortOrder: String, filter: MeetingUserFilter): [MeetingUser]
+    org(id: ID!): Org
+    allOrgs(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: OrgFilter): OrgPage
+    nonPaginationOrgs(sortField: String, sortOrder: String, filter: OrgFilter): [Org]
+    user(id: ID!): User
+    allUsers(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: UserFilter): UserPage
+    nonPaginationUsers(sortField: String, sortOrder: String, filter: UserFilter): [User]
+}
+
+"""
+The `Upload` scalar type represents a file upload.
+"""
+scalar Upload
+
+type User {
+    id: ID!
+    name: String
+    org_id: ID
+    meetingUsers: [MeetingUser]
+    relatedMeetings: [Meeting]
+    org: Org
+}
+
+input UserFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    name: String
+    org_id: ID
+}
+
+input UserInput {
+    id: ID
+    name: String
+    org_id: ID
+}
+
+type UserPage {
+    list: [User]
+    total: Int
+    pages: Int
+}
