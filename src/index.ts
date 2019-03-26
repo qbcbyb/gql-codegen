@@ -117,7 +117,6 @@ export const generateCodeFromData = async function(
 
     //生成前端graphql代码
     generateFront(
-        entities,
         graphqlSchema,
         config.files || {},
         config.unions || {},

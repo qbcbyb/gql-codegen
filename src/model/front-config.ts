@@ -13,8 +13,8 @@ export interface UnionSourceConfig {
 export interface EntityUnionSourceConfig {
     [key: string]:
         | string
-        | { [key: string]: { exclude?: string[]; include?: string[] } }
-        | [string | { [key: string]: { exclude?: string[]; include?: string[] } }];
+        | { [key: string]: { exclude?: string[]; include?: string[]; fields?: object } }
+        | [string | { [key: string]: { exclude?: string[]; include?: string[]; fields?: object } }];
 }
 
 export interface EntityUnionConfig {

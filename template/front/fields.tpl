@@ -1,7 +1,7 @@
 {{#each fields}}
-{{#unless isObjectType}}
+{{#if isVisibleNormalType}}
 {{name}}
-{{/unless}}
+{{/if}}
 {{#if ../not_mutation}}
 {{#if subResults}}
 {{name}} {

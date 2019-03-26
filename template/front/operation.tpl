@@ -5,7 +5,7 @@
     }{{/if}}
     {{#if unionObjectArr}}
     {{#each unionObjectArr}}
-    {{operationName}}{{#if args}}({{#each args}}{{name}}: {{alias}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}{{#if unionObjFields}} {
+    {{operationName}}{{#if args}}({{#each args}}{{name}}: {{alias}}{{#unless @last}}, {{/unless}}{{/each}}){{/if}}{{#if fields}} {
         {{fields}}
     }{{/if}}
     {{/each}}

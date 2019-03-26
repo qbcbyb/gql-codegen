@@ -51,17 +51,18 @@ function generateFrontOperations(
     });
 }
 function generateEntityUnionConfig(
-    unionEntity: string | { [key: string]: { exclude?: string[]; include?: string[] } }
+    unionEntity: string | { [key: string]: { exclude?: string[]; include?: string[]; fields?: object } }
 ): UnionConfig {
     if (typeof unionEntity === 'string') {
         return { [unionEntity]: { entityName: unionEntity } };
     } else {
-        return Object.keys(unionEntity).reduce((unionConfig, oneUnionConfigKey) => {
+        return Object.keys(unionEntity).reduce((unionConfig, oneUnionConfigKey): UnionConfig => {
             const oneUnionConfig = unionEntity[oneUnionConfigKey];
             unionConfig[oneUnionConfigKey] = {
                 entityName: oneUnionConfigKey,
                 exclude: oneUnionConfig.exclude,
-                include: oneUnionConfig.include
+                include: oneUnionConfig.include,
+                fields: oneUnionConfig.fields
             };
             return unionConfig;
         }, {});
@@ -86,7 +87,6 @@ function parseSourceUnionConfig(unionSourceConfig: UnionSourceConfig): { [key: s
 }
 
 export function generateFront(
-    entities: Entity[],
     schema: GraphQLSchema,
     fileConfig: { [key: string]: FrontendFileConfig },
     unionSourceConfig: UnionSourceConfig,

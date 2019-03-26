@@ -1,3 +1,19 @@
-mutation updateRelatedMeetingUsers($id: ID, $meeting: MeetingInput, $user: UserInput) {
-    updateRelatedMeetingUsers(id: $id, meeting: $meeting, user: $user)
+mutation updateRelatedMeetingUsers(
+    $id: ID
+    $meeting_id: ID
+    $user_id: ID
+    $meeting: MeetingInput
+    $user: UserInput
+    $meeting_ids: [ID]
+    $user_ids: [ID]
+) {
+    updateRelatedMeetingUsers(
+        id: $id
+        meeting_id: $meeting_id
+        user_id: $user_id
+        meeting: $meeting
+        user: $user
+        meeting_ids: $meeting_ids
+        user_ids: $user_ids
+    )
 }

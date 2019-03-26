@@ -220,7 +220,7 @@ export function recursiveHandlerFields(
     entityName: string,
     entityMap: TypeMap,
     recursiveLevel: number,
-    handler: (fields: { name: string; subResults: string; isObjectType: boolean }[]) => string,
+    handler: (fields: { name: string; subResults: string; isVisibleNormalType: boolean }[]) => string,
     fieldConfig?: any
 ): string {
     let entityType: GraphQLNamedType;
@@ -239,11 +239,8 @@ export function recursiveHandlerFields(
             let realType = getRealType(field.type),
                 subResults: string = '';
             const isObjectType = realType instanceof GraphQLObjectType;
-            if (
-                recursiveLevel > 0 &&
-                isObjectType &&
-                (!fieldConfig || !fieldConfig.hasOwnProperty(fieldKey) || fieldConfig[fieldKey])
-            ) {
+            const isFieldVisible = !fieldConfig || (fieldConfig.hasOwnProperty(fieldKey) && fieldConfig[fieldKey]);
+            if (isFieldVisible && isObjectType) {
                 subResults = recursiveHandlerFields(
                     (realType as GraphQLObjectType).name,
                     entityMap,
@@ -252,7 +249,7 @@ export function recursiveHandlerFields(
                     fieldConfig && fieldConfig[fieldKey]
                 );
             }
-            return { name: field.name, subResults, isObjectType };
+            return { name: field.name, subResults, isVisibleNormalType: isFieldVisible && !isObjectType };
         })
     );
 }

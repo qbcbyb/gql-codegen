@@ -35,9 +35,9 @@ const generateArgsAndFields = (
             [key: string]: any;
         }
     >,
-    excludeArgs: string[],
-    includeArgs: string[],
-    fieldConfig: object
+    excludeArgs: string[] | undefined,
+    includeArgs: string[] | undefined,
+    fieldConfig: object | undefined
 ): [string, ArgumentConfig[]] => {
     if (!operationType) return ['', []];
     const fieldType = getRealType(operationType.type);
@@ -108,7 +108,11 @@ const generateOneFile = (
     const unionObjectKeys: string[] = [];
     if (unionConfig) {
         Object.keys(unionConfig).forEach((unionOperationName) => {
-            const { exclude = [], include = [], fields: outputFields = {} } = unionConfig[unionOperationName];
+            const { exclude, include, fields: outputFields } = unionConfig[unionOperationName] || {
+                exclude: undefined,
+                include: undefined,
+                fields: undefined
+            };
             const fieldData = operationTypes[unionOperationName];
             unionObjectKeys.push(camelize(unionOperationName));
             const [unionObjFields, unionArgs] = generateArgsAndFields(
@@ -122,19 +126,18 @@ const generateOneFile = (
                 outputFields
             );
 
-            unionObjectArr.push({ fields: unionObjFields, operationName: unionOperationName, args: unionArgs });
-
-            unionArgs.reduce((_finalArgsTop, { name, alias, type }) => {
+            unionArgs.reduce((_finalArgsTop, unionArg) => {
+                let { name, alias, type } = unionArg;
                 for (const i of _finalArgsTop) {
                     if (i.alias === alias) {
-                        if (i.type === type) {
-                            //参数别名及类型都一致，可复用参数，无需再添加
+                        if (i.type === type && !type.startsWith('ID')) {
+                            //参数别名及类型都一致，且不是ID, 可复用参数，无需再添加
                             return _finalArgsTop;
                         }
                         break;
                     }
                 }
-                if (_finalArgsTop.some((i) => i.alias === alias && i.type !== type)) {
+                if (_finalArgsTop.some((i) => i.alias === alias && (i.type !== type || type.startsWith('ID')))) {
                     reg.lastIndex = 0;
                     const exec = reg.exec(alias);
                     if (exec) {
@@ -143,9 +146,12 @@ const generateOneFile = (
                         alias += 1;
                     }
                 }
-                _finalArgsTop.push({ name, alias, type });
+                Object.assign(unionArg, { name, alias, type });
+                _finalArgsTop.push(unionArg);
                 return _finalArgsTop;
             }, finalArgsTop);
+            
+            unionObjectArr.push({ fields: unionObjFields, operationName: unionOperationName, args: unionArgs });
         });
     }
     const fileName = operationName + addConnectorIfNonNull(unionObjectKeys.join('_') + (index || ''));
@@ -189,7 +195,11 @@ export function getFrontOperationGenerator(operation) {
         const operationType = operationTypes[operationName];
         const not_mutation = operation != 'mutation';
 
-        const { exclude = [], include = [], fields: outputFields = {} } = frontendFileConfig || {};
+        const { exclude, include, fields: outputFields } = frontendFileConfig || {
+            exclude: undefined,
+            include: undefined,
+            fields: undefined
+        };
         const [originFields, originArgs] = generateArgsAndFields(
             not_mutation,
             typeMaps,

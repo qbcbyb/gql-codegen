@@ -1,17 +1,33 @@
 mutation updateRelatedMeetings(
     $id: ID
+    $meeting_title: String
+    $meeting_time: Date
+    $meeting_type: Int
+    $meetingroom_id: ID
     $organizer: String
     $sponsor: String
+    $meeting_content: String
     $notifi: [String]
     $warn: [String]
+    $meeting_status: String
+    $attachment: Upload
+    $attachments: [Upload]
     $meetingroom: MeetingroomInput
 ) {
     updateRelatedMeetings(
         id: $id
+        meeting_title: $meeting_title
+        meeting_time: $meeting_time
+        meeting_type: $meeting_type
+        meetingroom_id: $meetingroom_id
         organizer: $organizer
         sponsor: $sponsor
+        meeting_content: $meeting_content
         notifi: $notifi
         warn: $warn
+        meeting_status: $meeting_status
+        attachment: $attachment
+        attachments: $attachments
         meetingroom: $meetingroom
     )
 }

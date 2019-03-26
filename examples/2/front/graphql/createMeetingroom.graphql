@@ -1,10 +1,21 @@
 mutation createMeetingroom(
     $id: ID
+    $room_name: String
     $area: String
     $capacity: String
+    $room_address: String
     $facility: [String]
     $photos: [String]
     $status: Boolean
 ) {
-    createMeetingroom(id: $id, area: $area, capacity: $capacity, facility: $facility, photos: $photos, status: $status)
+    createMeetingroom(
+        id: $id
+        room_name: $room_name
+        area: $area
+        capacity: $capacity
+        room_address: $room_address
+        facility: $facility
+        photos: $photos
+        status: $status
+    )
 }

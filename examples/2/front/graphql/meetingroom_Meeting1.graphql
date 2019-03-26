@@ -1,0 +1,12 @@
+query meetingroom($id: ID!, $id1: ID!) {
+    meetingroom(id: $id) {
+        id
+        room_name
+        area
+    }
+    meeting(id: $id1) {
+        meeting_title
+        meeting_time
+        meeting_type
+    }
+}
