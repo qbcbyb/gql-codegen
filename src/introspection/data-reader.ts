@@ -44,10 +44,10 @@ export abstract class DataReader {
      * @returns {Entity[]}
      * @memberof DataReader
      */
-    protected abstract getEntitiesFromDataSource(
+    protected abstract async getEntitiesFromDataSource(
         dataSource: DataSource,
         relationshipConfig: RelationshipConfig
-    ): Entity[];
+    ): Promise<Entity[]>;
     /**
      * 从实体的key（或表名）获取实体名称
      *
@@ -107,7 +107,6 @@ export abstract class DataReader {
      * @memberof DataReader
      */
     protected abstract getFieldNameInRelatedEntity(entityKey: string): string;
-    abstract isIdField(fieldKey: string): boolean;
     protected getRelatedFieldNamePrefix() {
         return 'related';
     }
@@ -315,10 +314,7 @@ export abstract class DataReader {
                 mutationFields[`update${entityName}`] = {
                     type: GraphQLBoolean,
                     args: getGraphqlFieldMapFromFields(
-                        getNullableFieldsFromFieldsExcludeFun(
-                            changeFileToUploadIfNeeded(entityFields),
-                            (f) => !this.isIdField(f.key)
-                        ),
+                        getNullableFieldsFromFieldsExcludeFun(changeFileToUploadIfNeeded(entityFields), (f) => !f.isId),
                         (f) => isRelationField(f)
                     )
                 };
@@ -371,7 +367,7 @@ extend type ${entity.name} { ${field.name}: ${field.type} }`;
     }
     async parseSourceData(data: DataSource, relationship: SourceRelationshipMap): Promise<EntitiesWithSchema> {
         const relationshipConfig = this.getRelationshipConfigFromSource(relationship);
-        let entities = this.getEntitiesFromDataSource(data, relationshipConfig);
+        let entities = await this.getEntitiesFromDataSource(data, relationshipConfig);
 
         const inputTypesByName = getInputTypesFromEntities(entities);
         const filterTypesByName = getFilterTypesFromData(entities);

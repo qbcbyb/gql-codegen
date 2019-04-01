@@ -15,6 +15,12 @@ import handlebars from './handlebars';
 
 const encoding = 'utf8';
 
+const resolvePath = (subPath: string): string => {
+    if (!subPath) return '';
+    const result = path.resolve(process.cwd(), subPath);
+    return result;
+};
+
 const mkdirIfNeeded = (parentDir) => (dir) => {
     const target = path.join(parentDir, dir);
     if (!fs.existsSync(target)) {
@@ -27,11 +33,12 @@ export { FileType, File, DateType } from './introspection/ex-graphql-type';
 export { applyFilters } from './data-source/applyFilters';
 
 export const generateCodeFromData = async function(
-    config: { files?: {}; unions?: {} } = {},
+    dataFilePath: string = '',
+    configPath: string = '',
     serverDir = './server/',
     frontendDir = './src/',
     generateConfigPath = '',
-    subFieldLevel = 1,
+    recursiveLevel = 1,
     templateFiles: {
         frontendConfig?: string;
         frontendConfigField?: string;
@@ -42,10 +49,21 @@ export const generateCodeFromData = async function(
         app?: string;
     } = {}
 ) {
-    let dataFilePath = path.join(process.cwd(), process.argv.length > 2 ? process.argv[2] : '');
-    if (!fs.existsSync(dataFilePath)) {
+    dataFilePath = resolvePath(dataFilePath);
+    configPath = resolvePath(configPath);
+    serverDir = resolvePath(serverDir);
+    frontendDir = resolvePath(frontendDir);
+    frontendDir = resolvePath(frontendDir);
+    generateConfigPath = resolvePath(generateConfigPath);
+
+    if (!fs.existsSync(dataFilePath) || !fs.statSync(dataFilePath).isFile()) {
         throw new Error('No json data file found');
     }
+
+    if (recursiveLevel < 1 || recursiveLevel > 5) {
+        throw new Error('fieldLevel must in [1...5]');
+    }
+    
     const data = require(dataFilePath);
     const relationshipConfig = data.__relationships || {};
     delete data.__relationships;
@@ -65,7 +83,7 @@ export const generateCodeFromData = async function(
             prettier.format(
                 generateConfig(
                     graphqlSchema,
-                    subFieldLevel,
+                    recursiveLevel,
                     templateFiles.frontendConfig,
                     templateFiles.frontendConfigField
                 ),
@@ -75,6 +93,11 @@ export const generateCodeFromData = async function(
         );
         return;
     }
+    const configFileCanUse = fs.existsSync(configPath) && fs.statSync(configPath).isFile();
+    if (configPath && !configFileCanUse) {
+        throw new Error('configPath provide a non file path');
+    }
+    const config: { files?: {}; unions?: {} } = configFileCanUse ? require(configPath) : {};
 
     ['schema', 'resolver', 'dataSource'].forEach(mkdirIfNeeded(serverDir));
     ['graphql'].forEach(mkdirIfNeeded(frontendDir));
@@ -121,7 +144,7 @@ export const generateCodeFromData = async function(
         config.files || {},
         config.unions || {},
         path.join(frontendDir, 'graphql'),
-        subFieldLevel,
+        recursiveLevel,
         {
             ...prettierConfig,
             parser: 'graphql'

@@ -17,6 +17,42 @@ export function isSqliteDataSource(data: DataSource): data is SqliteDataSource {
     return !!sqliteDataSource.dbFilePath;
 }
 
+
+export interface Name {
+    type: string;
+    variant: string;
+    name: string;
+}
+
+export interface Datatype {
+    type: string;
+    variant: string;
+    affinity: string;
+}
+
+export interface Definition {
+    type: string;
+    variant: string;
+    name?: string;
+    definition?: Definition[];
+    datatype?: Datatype;
+    autoIncrement?: boolean;
+}
+
+export interface Statement {
+    type: string;
+    name: Name;
+    variant: string;
+    format: string;
+    definition: Definition[];
+}
+
+export interface TableDefinition {
+    type: string;
+    variant: string;
+    statement: Statement[];
+}
+
 /**
  *关联关系配置
  * @example

@@ -50,7 +50,6 @@ export interface Entity {
     readonly type: GraphQLObjectType;
     hasRelationField?: boolean;
     hasTwoRelationField?: boolean;
-    readonly count: number;
     readonly hasDate: boolean;
     readonly hasBigInt: boolean;
     readonly hasJSON: boolean;

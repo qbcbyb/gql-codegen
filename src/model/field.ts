@@ -60,9 +60,23 @@ export interface Field {
      * @memberof Field
      */
     readonly key: string;
-    readonly values?: any[];
     readonly type: GraphQLType | string;
+    /**
+     * 该字段是否为外键字段
+     * @example
+     ```
+     users:[
+          {id: 1, first_name: "hello1", last_name: "world1", org_id: 1},
+          {id: 2, first_name: "hello2", last_name: "world2", org_id: 2},
+        ]
+     ```
+     中的org_id即为外键字段
+     *
+     * @type {boolean}
+     * @memberof Field
+     */
     hasRelation?: boolean;
+    isId?: boolean;
 }
 export interface ManyToOneField extends Field {
     readonly relatedEntityName: string;

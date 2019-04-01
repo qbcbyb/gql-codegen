@@ -25,14 +25,18 @@ import {
     valuesAreInteger,
     valuesAreBitInt,
     valuesAreNumeric,
-    valuesAreObject
-} from './type-helper';
+    valuesAreObject,
+    getTypeFromValues
+} from '../type-helper';
 import { FileType, DateType } from '../ex-graphql-type';
 import * as GraphQLJSON from 'graphql-type-json';
 import * as BigInt from 'graphql-bigint';
 
 export class MockDataReader extends DataReader {
-    protected getEntitiesFromDataSource(dataSource: MockDataSource, relationshipConfig: RelationshipConfig): Entity[] {
+    protected async getEntitiesFromDataSource(
+        dataSource: MockDataSource,
+        relationshipConfig: RelationshipConfig
+    ): Promise<Entity[]> {
         return Object.keys(dataSource).map(
             (entityKey): Entity => {
                 const entityDataList = dataSource[entityKey];
@@ -46,7 +50,6 @@ export class MockDataReader extends DataReader {
                     key: entityKey,
                     name: entityName,
                     fields,
-                    count: entityDataList.length,
                     hasDate,
                     hasBigInt,
                     hasJSON,
@@ -74,80 +77,6 @@ export class MockDataReader extends DataReader {
     protected getFieldNameInRelatedEntity(entityKey: string): string {
         return camelize(pluralize(this.getEntityNameFromKey(entityKey)), true);
     }
-    isIdField(fieldKey: string): boolean {
-        return fieldKey.toLowerCase() == 'id';
-    }
-
-    getTypeFromValues(
-        entityKey: string,
-        fieldKey: string,
-        values: any[],
-        entityDataCount: number,
-        relationshipConfig: RelationshipConfig
-    ): [GraphQLOutputType, boolean, boolean, boolean, boolean] {
-        const isRequired = values.length == entityDataCount;
-        if (this.isIdField(fieldKey) || (relationshipConfig[entityKey] && relationshipConfig[entityKey][fieldKey])) {
-            return requiredTypeOrNormal(GraphQLID, isRequired);
-        }
-        if (values.length > 0) {
-            if (valuesAreArray(values)) {
-                const leafValues = values.reduce((agg, arr) => {
-                    arr.forEach((value) => agg.push(value));
-                    return agg;
-                }, []);
-                if (valuesAreBoolean(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(GraphQLBoolean), isRequired);
-                }
-                if (valuesAreDate(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(DateType), isRequired);
-                }
-                if (valuesAreFile(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(FileType), isRequired);
-                }
-                if (valuesAreString(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(GraphQLString), isRequired);
-                }
-                if (valuesAreInteger(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(GraphQLInt), isRequired);
-                }
-                if (valuesAreBitInt(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(BigInt), isRequired);
-                }
-                if (valuesAreNumeric(leafValues)) {
-                    return requiredTypeOrNormal(new GraphQLList(GraphQLFloat), isRequired);
-                }
-                if (valuesAreObject(leafValues)) {
-                    return requiredTypeOrNormal(GraphQLJSON, isRequired);
-                }
-                return requiredTypeOrNormal(new GraphQLList(GraphQLString), isRequired); // FIXME introspect further
-            }
-            if (valuesAreBoolean(values)) {
-                return requiredTypeOrNormal(GraphQLBoolean, isRequired);
-            }
-            if (valuesAreDate(values)) {
-                return requiredTypeOrNormal(DateType, isRequired);
-            }
-            if (valuesAreFile(values)) {
-                return requiredTypeOrNormal(FileType, isRequired);
-            }
-            if (valuesAreString(values)) {
-                return requiredTypeOrNormal(GraphQLString, isRequired);
-            }
-            if (valuesAreInteger(values)) {
-                return requiredTypeOrNormal(GraphQLInt, isRequired);
-            }
-            if (valuesAreBitInt(values)) {
-                return requiredTypeOrNormal(BigInt, isRequired);
-            }
-            if (valuesAreNumeric(values)) {
-                return requiredTypeOrNormal(GraphQLFloat, isRequired);
-            }
-            if (valuesAreObject(values)) {
-                return requiredTypeOrNormal(GraphQLJSON, isRequired);
-            }
-        }
-        return requiredTypeOrNormal(GraphQLString, isRequired); // FIXME introspect further
-    }
 
     getFieldsFromEntityDataList(
         entityKey: string,
@@ -170,25 +99,24 @@ export class MockDataReader extends DataReader {
                 }
             });
         });
-        const fields = Object.keys(fieldValues).map((key) => {
-            const [type, hasDateInField, hasBigIntInField, hasJSONInField, hasFileInField] = this.getTypeFromValues(
-                entityKey,
-                key,
-                fieldValues[key],
-                entityDataList.length,
-                relationshipConfig
-            );
-            hasDate = hasDate || hasDateInField;
-            hasBigInt = hasBigInt || hasBigIntInField;
-            hasJSON = hasJSON || hasJSONInField;
-            hasFile = hasFile || hasFileInField;
-            return {
-                key,
-                name: this.getFieldNameFromKey(key),
-                values: fieldValues[key],
-                type
-            };
-        });
+        const fields = Object.keys(fieldValues).map(
+            (key): Field => {
+                const isId = key.toLowerCase() == 'id';
+                const [type, hasDateInField, hasBigIntInField, hasJSONInField, hasFileInField] = getTypeFromValues(
+                    entityKey,
+                    key,
+                    fieldValues[key],
+                    entityDataList.length,
+                    relationshipConfig,
+                    isId
+                );
+                hasDate = hasDate || hasDateInField;
+                hasBigInt = hasBigInt || hasBigIntInField;
+                hasJSON = hasJSON || hasJSONInField;
+                hasFile = hasFile || hasFileInField;
+                return { isId, key, name: this.getFieldNameFromKey(key), type };
+            }
+        );
         return {
             fields,
             hasDate,

@@ -1,28 +1,27 @@
 #!/usr/bin/env node
 
-import * as path from 'path';
+import * as commander from 'commander';
 import { generateCodeFromData } from './index';
+import { existsSync, statSync } from 'fs';
 
-let config: { files?: {}; unions?: {} } = {},
-    serverDir = './server/',
-    frontendDir = './src/',
-    generateConfigPath = '',
-    subFieldLevel = 1;
+commander
+    .name('gql-codegen')
+    .version(require('../package.json').version)
+    .arguments('<dataSourcePath>')
+    .action(function(dataSourcePath, options) {
+        generateCodeFromData(
+            dataSourcePath,
+            options.config,
+            options.server,
+            options.front,
+            options.configSample,
+            options.fieldLevel + 1
+        );
+    })
+    .option('--configSample <generateConfigPath>', 'The path to generate the sample config file')
+    .option('-c, --config <configPath>', 'The path of config file to use')
+    .option('--server <serverDir>', 'The dir for backend code to generate', './server/')
+    .option('--front <frontendDir>', 'The dir for frontend code to generate', './src/')
+    .option('--fieldLevel <fieldLevel>', 'The recursive level of frontend code', (i) => parseInt(i, 10), 1)
 
-if (process.argv.includes('--configSample')) {
-    generateConfigPath = path.join(process.cwd(), process.argv[process.argv.indexOf('--configSample') + 1]);
-}
-if (process.argv.includes('-c')) {
-    config = require(path.join(process.cwd(), process.argv[process.argv.indexOf('-c') + 1]));
-}
-if (process.argv.includes('--server')) {
-    serverDir = path.join(process.cwd(), process.argv[process.argv.indexOf('--server') + 1]);
-}
-if (process.argv.includes('--front')) {
-    frontendDir = path.join(process.cwd(), process.argv[process.argv.indexOf('--front') + 1]);
-}
-if (process.argv.includes('--fieldLevel')) {
-    subFieldLevel = parseInt(process.argv[process.argv.indexOf('--fieldLevel') + 1]) - 1;
-}
-
-generateCodeFromData(config, serverDir, frontendDir, generateConfigPath, subFieldLevel);
+    .parse(process.argv);

@@ -2,10 +2,11 @@ import { DataSource, isSqliteDataSource, SourceRelationshipMap } from '../model/
 import { DataReader } from './data-reader';
 import { MockDataReader } from './mock/mock-reader';
 import { EntitiesWithSchema } from '../model/entities-with-schema';
+import { SqliteDataReader } from './sqlite/sqlite-reader';
 
 function createDataReader(data: DataSource): DataReader {
     if (isSqliteDataSource(data)) {
-        //TODO: add sqliteDataReader
+        return new SqliteDataReader();
     }
     return new MockDataReader();
 }
