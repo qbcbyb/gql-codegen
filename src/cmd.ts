@@ -14,7 +14,7 @@ commander
             options.server,
             options.front,
             options.configSample,
-            options.fieldLevel + 1
+            options.fieldLevel
         );
     })
     .option('--configSample <generateConfigPath>', 'The path to generate the sample config file')

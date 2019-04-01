@@ -21,18 +21,19 @@ import { TypeMap } from 'graphql/type/schema';
 function getRangeFiltersFromEntities(sourceFields: Field[]) {
     return sourceFields.reduce((fields, sourceField) => {
         const fieldType = sourceField.type;
-        if (fieldType) {
-            const fieldTypeName = getFieldTypeName(fieldType);
+        if (fieldType && typeof fieldType != 'string') {
+            const reaType = getRealType(fieldType);
+            const fieldTypeName = getFieldTypeName(reaType);
             if (
-                fieldType == GraphQLInt ||
-                fieldType == GraphQLFloat ||
+                reaType == GraphQLInt ||
+                reaType == GraphQLFloat ||
                 fieldTypeName == 'Date' ||
                 fieldTypeName == 'BigInt'
             ) {
-                fields[`${sourceField.name}_lt`] = { type: fieldType };
-                fields[`${sourceField.name}_lte`] = { type: fieldType };
-                fields[`${sourceField.name}_gt`] = { type: fieldType };
-                fields[`${sourceField.name}_gte`] = { type: fieldType };
+                fields[`${sourceField.name}_lt`] = { type: reaType };
+                fields[`${sourceField.name}_lte`] = { type: reaType };
+                fields[`${sourceField.name}_gt`] = { type: reaType };
+                fields[`${sourceField.name}_gte`] = { type: reaType };
             }
         }
         return fields;
