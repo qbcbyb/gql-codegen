@@ -1,6 +1,6 @@
 # gql-codegen
 
-Generate GraphQL code by mock.js or sqlite
+Generate GraphQL code by mock.js or sqlite, Inspire by [json-graphql-server](https://github.com/marmelab/json-graphql-server)
 
 ## install
 
