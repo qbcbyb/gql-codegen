@@ -33,8 +33,8 @@ $ gql-codegen examples/data2.js -c examples/2/config.js
 
 `$ gql-codegen examples/data2.js -c examples/2/config.js`
 **->**
-`examples/2/front/*`,`examples/2/server`
+`examples/2/front/*`,`examples/2/server/*`
 
 ## add generate from sqlite on version: 0.0.2+
 
-See `examples/data2sqlite.js`, `examples/data2.db`, `examples/2sqlite`
+See `examples/data2sqlite.js`, `examples/data2.db`, `examples/2sqlite/*`
