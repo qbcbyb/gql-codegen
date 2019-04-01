@@ -8,7 +8,7 @@ Generate GraphQL code by mock.js or sqlite, Inspire by [json-graphql-server](htt
 $ npm install gql-codegen -g
 ```
 
-## generate from mock data
+## generate from mock data use cli
 
 ```
 $ gql-codegen data2.js
@@ -22,6 +22,32 @@ You can also config frontend output
 $ gql-codegen examples/data2.js --configSample examples/2/config.js
 and modify examples/2/config.js, then:
 $ gql-codegen examples/data2.js -c examples/2/config.js
+```
+
+## generate use Node.js
+
+```
+const { generateCodeFromData } = require("gql-codegen");
+//arguments like below:
+//-------------------------------------------------------------------
+//dataFilePath: string = '',
+//configPath: string = '',
+//serverDir = './server/',
+//frontendDir = './src/',
+//generateConfigPath = '',
+//recursiveLevel = 1,
+//templateFiles: {
+//    frontendConfig?: string;
+//    frontendConfigField?: string;
+//    mockDataSource?: string;
+//    sqliteDataSource?: string;
+//    frontendOperation?: string;
+//    frontendOperationField?: string;
+//    resolver?: string;
+//    app?: string;
+//} = {}
+//-------------------------------------------------------------------
+generateCodeFromData(...);
 ```
 
 ## examples
