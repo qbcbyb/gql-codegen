@@ -2,7 +2,6 @@
 
 import * as commander from 'commander';
 import { generateCodeFromData } from './index';
-import { existsSync, statSync } from 'fs';
 
 commander
     .name('gql-codegen')

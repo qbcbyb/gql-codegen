@@ -38,7 +38,7 @@ export const generateCodeFromData = async function(
     serverDir = './server/',
     frontendDir = './src/',
     generateConfigPath = '',
-    recursiveLevel = 1,
+    recursiveLevel = 2,
     templateFiles: {
         frontendConfig?: string;
         frontendConfigField?: string;
