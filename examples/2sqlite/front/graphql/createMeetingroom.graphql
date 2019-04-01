@@ -1,0 +1,21 @@
+mutation createMeetingroom(
+    $id: ID
+    $roomName: String
+    $area: String
+    $capacity: String
+    $roomAddress: String
+    $facility: String
+    $photos: String
+    $status: Boolean
+) {
+    createMeetingroom(
+        id: $id
+        roomName: $roomName
+        area: $area
+        capacity: $capacity
+        roomAddress: $roomAddress
+        facility: $facility
+        photos: $photos
+        status: $status
+    )
+}

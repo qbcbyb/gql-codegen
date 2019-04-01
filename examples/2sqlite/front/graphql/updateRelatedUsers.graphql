@@ -1,0 +1,3 @@
+mutation updateRelatedUsers($id: ID, $name: String, $orgId: Int, $org: OrgInput) {
+    updateRelatedUsers(id: $id, name: $name, orgId: $orgId, org: $org)
+}

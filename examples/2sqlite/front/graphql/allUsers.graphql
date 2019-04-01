@@ -1,0 +1,265 @@
+query allUsers($page: Int, $perPage: Int, $sortField: String, $sortOrder: String, $filter: UserFilter) {
+    allUsers(page: $page, perPage: $perPage, sortField: $sortField, sortOrder: $sortOrder, filter: $filter) {
+        list {
+            id
+            name
+            orgId
+            meetingUsers {
+                id
+                meetingId
+                userId
+                meeting {
+                    id
+                    meetingTitle
+                    meetingTime
+                    meetingType
+                    meetingroomId
+                    organizer
+                    sponsor
+                    meetingContent
+                    notifi
+                    warn
+                    meetingStatus
+                    attachment {
+                        id
+                        fileName
+                        fullPath
+                        thumbnail
+                        mimetype
+                    }
+                    attachments {
+                        id
+                        fileName
+                        fullPath
+                        thumbnail
+                        mimetype
+                    }
+                    meetingroom {
+                        id
+                        roomName
+                        area
+                        capacity
+                        roomAddress
+                        facility
+                        photos
+                        status
+                    }
+                    meetingUsers {
+                        id
+                        meetingId
+                        userId
+                    }
+                    relatedUsers {
+                        id
+                        name
+                        orgId
+                    }
+                }
+                user {
+                    id
+                    name
+                    orgId
+                    meetingUsers {
+                        id
+                        meetingId
+                        userId
+                    }
+                    relatedMeetings {
+                        id
+                        meetingTitle
+                        meetingTime
+                        meetingType
+                        meetingroomId
+                        organizer
+                        sponsor
+                        meetingContent
+                        notifi
+                        warn
+                        meetingStatus
+                    }
+                    org {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                }
+            }
+            relatedMeetings {
+                id
+                meetingTitle
+                meetingTime
+                meetingType
+                meetingroomId
+                organizer
+                sponsor
+                meetingContent
+                notifi
+                warn
+                meetingStatus
+                attachment {
+                    id
+                    fileName
+                    fullPath
+                    thumbnail
+                    mimetype
+                }
+                attachments {
+                    id
+                    fileName
+                    fullPath
+                    thumbnail
+                    mimetype
+                }
+                meetingroom {
+                    id
+                    roomName
+                    area
+                    capacity
+                    roomAddress
+                    facility
+                    photos
+                    status
+                    meetings {
+                        id
+                        meetingTitle
+                        meetingTime
+                        meetingType
+                        meetingroomId
+                        organizer
+                        sponsor
+                        meetingContent
+                        notifi
+                        warn
+                        meetingStatus
+                    }
+                }
+                meetingUsers {
+                    id
+                    meetingId
+                    userId
+                    meeting {
+                        id
+                        meetingTitle
+                        meetingTime
+                        meetingType
+                        meetingroomId
+                        organizer
+                        sponsor
+                        meetingContent
+                        notifi
+                        warn
+                        meetingStatus
+                    }
+                    user {
+                        id
+                        name
+                        orgId
+                    }
+                }
+                relatedUsers {
+                    id
+                    name
+                    orgId
+                    meetingUsers {
+                        id
+                        meetingId
+                        userId
+                    }
+                    relatedMeetings {
+                        id
+                        meetingTitle
+                        meetingTime
+                        meetingType
+                        meetingroomId
+                        organizer
+                        sponsor
+                        meetingContent
+                        notifi
+                        warn
+                        meetingStatus
+                    }
+                    org {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                }
+            }
+            org {
+                id
+                orgName
+                parentorgId
+                parentorg {
+                    id
+                    orgName
+                    parentorgId
+                    parentorg {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                    subOrgs {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                    users {
+                        id
+                        name
+                        orgId
+                    }
+                }
+                subOrgs {
+                    id
+                    orgName
+                    parentorgId
+                    parentorg {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                    subOrgs {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                    users {
+                        id
+                        name
+                        orgId
+                    }
+                }
+                users {
+                    id
+                    name
+                    orgId
+                    meetingUsers {
+                        id
+                        meetingId
+                        userId
+                    }
+                    relatedMeetings {
+                        id
+                        meetingTitle
+                        meetingTime
+                        meetingType
+                        meetingroomId
+                        organizer
+                        sponsor
+                        meetingContent
+                        notifi
+                        warn
+                        meetingStatus
+                    }
+                    org {
+                        id
+                        orgName
+                        parentorgId
+                    }
+                }
+            }
+        }
+        total
+        pages
+    }
+}

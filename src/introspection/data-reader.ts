@@ -35,6 +35,7 @@ import {
 import { Field, ManyToOneField, ManyToManyField, OneToManyField } from '../model/field';
 
 export abstract class DataReader {
+    abstract dataFilePathHandler(dataSource: DataSource, dataFilePath: string): string;
     /**
      * 从数据源中获取实体数组
      *
@@ -376,4 +377,6 @@ extend type ${entity.name} { ${field.name}: ${field.type} }`;
         const schema: GraphQLSchema = this.getSchemaFromEntities(entities, inputTypesByName, filterTypesByName);
         return new EntitiesWithSchema(entities, schema, this);
     }
+
+    abstract getTemplateFromConfig(templateFiles: { mockDataSource?: string; sqliteDataSource?: string }): string;
 }

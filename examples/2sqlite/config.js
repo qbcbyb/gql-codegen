@@ -8528,7 +8528,7 @@ module.exports = {
             fields: {}
         },
         batchCreateMeetingrooms: {
-            noNeed: true,
+            noNeed: false,
             exclude: [],
             include: ['meetingrooms'],
             fields: {}
@@ -8827,16 +8827,5 @@ module.exports = {
         //     },
         //     "training"
         // ]
-        meetingroom: [
-            {
-                meeting: {
-                    fields: {
-                        meetingTitle: {},
-                        meetingTime: {},
-                        meetingType: {}
-                    }
-                }
-            }
-        ]
     }
 };

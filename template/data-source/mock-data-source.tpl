@@ -50,23 +50,23 @@ module.exports = class {
     {{#each entities}}
 
     //----------------start of {{entityName}}
-    async all{{pluralize entityName}}({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }) {
+    async all{{pluralize entityName}}({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
         let items = [...mockData['{{entityKey}}']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
     }
-    async nonPagination{{pluralize entityName}}({ sortField, sortOrder = 'asc', filter = {} }) {
+    async nonPagination{{pluralize entityName}}({ sortField, sortOrder = 'asc', filter = {} }, info) {
         let items = [...mockData['{{entityKey}}']];
 
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
-    async {{littleCamelize entityName}}({ id }) {
+    async {{littleCamelize entityName}}({ id }, info) {
         return mockData['{{entityKey}}'].find((d) => d.id == id);
     }
     {{#if hasRelationField}}
-    async createRelated{{pluralize entityName}}(entity) {
+    async createRelated{{pluralize entityName}}(entity, info) {
         const keys = Object.keys(entity);
-        const manyToManyIdsFields = {{{jsonStringify manyToManyIdsFields}}};
+        const manyToManyIdsFields = {{{manyToManyIdsFields}}};
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
 
         if (manyFields.length > 1) {
@@ -109,9 +109,9 @@ module.exports = class {
             return (await Promise.all(promiseArr));
         }
     }
-    async updateRelated{{pluralize entityName}}(entity) {
+    async updateRelated{{pluralize entityName}}(entity, info) {
         const keys = Object.keys(entity);
-        const manyToManyIdsFields = {{{jsonStringify manyToManyIdsFields}}};
+        const manyToManyIdsFields = {{{manyToManyIdsFields}}};
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
 
         if (manyFields.length > 1) {
@@ -160,7 +160,7 @@ module.exports = class {
         }
     }
     {{/if}}
-    async create{{entityName}}(entity) {
+    async create{{entityName}}(entity, info) {
         const entityData = mockData['{{entityKey}}'];
         const newId = entityData.length > 0 ? parseInt(entityData[entityData.length - 1].id, 10) + 1 : 0;
         const newEntity = Object.assign({ id: `${newId}` }, entity);
@@ -189,7 +189,7 @@ module.exports = class {
         entityData.push(newEntity);
         return newEntity.id;
     }
-    async batchCreate{{pluralize entityName}}({ {{#littleCamelize entityName}}{{pluralize this}}{{/littleCamelize}}: entitys }) {
+    async batchCreate{{pluralize entityName}}({ {{#littleCamelize entityName}}{{pluralize this}}{{/littleCamelize}}: entitys }, info) {
         if (entitys && entitys.length) {
             const created = [];
             try {
@@ -210,7 +210,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async update{{entityName}}(params) {
+    async update{{entityName}}(params, info) {
         const entityData = mockData['{{entityKey}}'];
         const indexOfEntity = entityData.findIndex((e) => e.id == params.id);
         if (indexOfEntity != -1) {
@@ -239,7 +239,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entity by id: ${params.id}!`);
     }
-    async batchUpdate{{pluralize entityName}}({ {{#littleCamelize entityName}}{{pluralize this}}{{/littleCamelize}}: entitys }) {
+    async batchUpdate{{pluralize entityName}}({ {{#littleCamelize entityName}}{{pluralize this}}{{/littleCamelize}}: entitys }, info) {
         if (entitys && entitys.length) {
             const updated = [];
             try {
@@ -264,7 +264,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async remove{{entityName}}({ id }) {
+    async remove{{entityName}}({ id }, info) {
         const entityData = mockData['{{entityKey}}'];
         const indexOfEntity = entityData.findIndex((e) => e.id == id);
         
@@ -273,7 +273,7 @@ module.exports = class {
         }
         return indexOfEntity > -1;
     }
-    async batchRemove{{pluralize entityName}}({ {{littleCamelize entityName}}Ids: ids }) {
+    async batchRemove{{pluralize entityName}}({ {{littleCamelize entityName}}Ids: ids }, info) {
         if (ids && ids.length) {
             const removed = [];
             try {
@@ -296,14 +296,14 @@ module.exports = class {
     }
         {{#if manyToOneFields}}
             {{#each manyToOneFields}}
-    async find{{camelize name}}By{{../entityName}}({ {{littleCamelize ../entityName}} }) {
+    async find{{camelize name}}By{{../entityName}}({ {{littleCamelize ../entityName}} }, info) {
         return mockData['{{relatedEntityKey}}'].find((relatedRecord) => relatedRecord.id == {{littleCamelize ../entityName}}['{{relatedFieldName}}']);
     }
             {{/each}}
         {{/if}}
         {{#if oneToManyFields}}
             {{#each oneToManyFields}}
-    async get{{#pluralize name}}{{camelize this}}{{/pluralize}}Of{{../entityName}}({ {{littleCamelize ../entityName}} }) {
+    async get{{#pluralize name}}{{camelize this}}{{/pluralize}}Of{{../entityName}}({ {{littleCamelize ../entityName}} }, info) {
         let result = mockData['{{relatedEntityKey}}'].filter((record) => record['{{key}}'] == {{littleCamelize ../entityName}}.id);
         {{#if remoteEntityKey}}
         result = applyFilters(mockData['{{remoteEntityKey}}'], { ids: result.map(r => r.{{remoteFieldKey}}) });

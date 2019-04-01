@@ -24,13 +24,16 @@ import { requiredTypeOrNormal, getTypeFromValues } from '../type-helper';
 export class SqliteDataReader extends DataReader {
     tablePrefix: string;
     fieldPrefix: string;
+    dataFilePathHandler(dataSource: SqliteDataSource, dataFilePath: string): string {
+        return path.resolve(process.cwd(), dataSource.dbFilePath);
+    }
     protected async getEntitiesFromDataSource(
         dataSource: SqliteDataSource,
         relationshipConfig: RelationshipConfig
     ): Promise<Entity[]> {
         this.tablePrefix = dataSource.tablePrefix || '';
         this.fieldPrefix = dataSource.fieldPrefix || '';
-        const db = await sqlite.open(path.resolve(process.cwd(), dataSource.dbFilePath), { promise: Promise });
+        const db = await sqlite.open(path.resolve(process.cwd(), dataSource.dbFilePath));
         const tables = await db.all(
             'select * from sqlite_master where type = "table" and name like ?;',
             `${this.tablePrefix}%`
@@ -186,5 +189,14 @@ export class SqliteDataReader extends DataReader {
             hasJSON,
             hasFile
         };
+    }
+    getTemplateFromConfig(templateFiles: {
+        mockDataSource?: string | undefined;
+        sqliteDataSource?: string | undefined;
+    }): string {
+        return (
+            templateFiles.sqliteDataSource ||
+            path.join(__dirname, '../../../template/data-source/sqlite-data-source.tpl')
+        );
     }
 }

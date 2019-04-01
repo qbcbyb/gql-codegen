@@ -1,0 +1,19 @@
+mutation updateRelatedMeetingUsers(
+    $id: ID
+    $meetingId: Int
+    $userId: Int
+    $meeting: MeetingInput
+    $user: UserInput
+    $meetingIds: [Int]
+    $userIds: [Int]
+) {
+    updateRelatedMeetingUsers(
+        id: $id
+        meetingId: $meetingId
+        userId: $userId
+        meeting: $meeting
+        user: $user
+        meetingIds: $meetingIds
+        userIds: $userIds
+    )
+}

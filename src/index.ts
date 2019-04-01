@@ -42,7 +42,8 @@ export const generateCodeFromData = async function(
     templateFiles: {
         frontendConfig?: string;
         frontendConfigField?: string;
-        dataSource?: string;
+        mockDataSource?: string;
+        sqliteDataSource?: string;
         frontendOperation?: string;
         frontendOperationField?: string;
         resolver?: string;
@@ -63,7 +64,7 @@ export const generateCodeFromData = async function(
     if (recursiveLevel < 1 || recursiveLevel > 5) {
         throw new Error('fieldLevel must in [1...5]');
     }
-    
+
     const data = require(dataFilePath);
     const relationshipConfig = data.__relationships || {};
     delete data.__relationships;
@@ -130,8 +131,10 @@ export const generateCodeFromData = async function(
         prettier.format(
             generateDataSource(
                 entities,
-                path.relative(path.join(serverDir, 'dataSource'), dataFilePath).replace(/\\+/g, '/'),
-                templateFiles.dataSource
+                path
+                    .relative(path.join(serverDir, 'dataSource'), dataReader.dataFilePathHandler(data, dataFilePath))
+                    .replace(/\\+/g, '/'),
+                dataReader.getTemplateFromConfig(templateFiles)
             ),
             prettierConfig
         ),

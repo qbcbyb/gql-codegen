@@ -14,44 +14,44 @@ module.exports = {
     {{#if entities}}
     Query: {
         {{#each entities}}
-        async all{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.all{{pluralize entityName}}(args);
+        async all{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.all{{pluralize entityName}}(args, info);
         },
-        async nonPagination{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.nonPagination{{pluralize entityName}}(args);
+        async nonPagination{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.nonPagination{{pluralize entityName}}(args, info);
         },
-        async {{littleCamelize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.{{littleCamelize entityName}}(args);
+        async {{littleCamelize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.{{littleCamelize entityName}}(args, info);
         },
         {{/each}}
     },
     Mutation: {
         {{#each entities}}
         {{#if hasRelationField}}
-        async createRelated{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.createRelated{{pluralize entityName}}(args);
+        async createRelated{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.createRelated{{pluralize entityName}}(args, info);
         },
-        async updateRelated{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.updateRelated{{pluralize entityName}}(args);
+        async updateRelated{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.updateRelated{{pluralize entityName}}(args, info);
         },
         {{/if}}
-        async create{{entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.create{{entityName}}(args);
+        async create{{entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.create{{entityName}}(args, info);
         },
-        async batchCreate{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.batchCreate{{pluralize entityName}}(args);
+        async batchCreate{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.batchCreate{{pluralize entityName}}(args, info);
         },
-        async update{{entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.update{{entityName}}(args);
+        async update{{entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.update{{entityName}}(args, info);
         },
-        async batchUpdate{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.batchUpdate{{pluralize entityName}}(args);
+        async batchUpdate{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.batchUpdate{{pluralize entityName}}(args, info);
         },
-        async remove{{entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.remove{{entityName}}(args);
+        async remove{{entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.remove{{entityName}}(args, info);
         },
-        async batchRemove{{pluralize entityName}}(_, args, { dataSources }) {
-            return await dataSources.defaultApi.batchRemove{{pluralize entityName}}(args);
+        async batchRemove{{pluralize entityName}}(_, args, { dataSources }, info) {
+            return await dataSources.defaultApi.batchRemove{{pluralize entityName}}(args, info);
         },
         {{/each}}
     },
@@ -59,15 +59,15 @@ module.exports = {
     {{entityName}}: {
         {{#if manyToOneFields}}
         {{#each manyToOneFields}}
-        async {{name}}(entity, args, { dataSources }) {
-            return await dataSources.defaultApi.find{{camelize name}}By{{../entityName}}({ ...args, {{littleCamelize ../entityName}}: entity });
+        async {{name}}(entity, args, { dataSources }, info) {
+            return await dataSources.defaultApi.find{{camelize name}}By{{../entityName}}({ ...args, {{littleCamelize ../entityName}}: entity }, info);
         },
         {{/each}}
         {{/if}}
         {{#if oneToManyFields}}
         {{#each oneToManyFields}}
-        async {{name}}(entity, args, { dataSources }) {
-            return await dataSources.defaultApi.get{{#pluralize name}}{{camelize this}}{{/pluralize}}Of{{../entityName}}({ ...args, {{littleCamelize ../entityName}}: entity });
+        async {{name}}(entity, args, { dataSources }, info) {
+            return await dataSources.defaultApi.get{{#pluralize name}}{{camelize this}}{{/pluralize}}Of{{../entityName}}({ ...args, {{littleCamelize ../entityName}}: entity }, info);
         },
         {{/each}}
         {{/if}}

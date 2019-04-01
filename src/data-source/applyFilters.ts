@@ -8,25 +8,21 @@ export function applyFilters(entityData: any[] = [], filter: any = {}) {
             .filter((key) => key !== 'q')
             .forEach((key) => {
                 if (key.indexOf('_lte') !== -1) {
-                    // less than or equal
                     const realKey = key.replace(/(_lte)$/, '');
                     items = items.filter((d) => d[realKey] <= filter[key]);
                     return;
                 }
                 if (key.indexOf('_gte') !== -1) {
-                    // less than or equal
                     const realKey = key.replace(/(_gte)$/, '');
                     items = items.filter((d) => d[realKey] >= filter[key]);
                     return;
                 }
                 if (key.indexOf('_lt') !== -1) {
-                    // less than or equal
                     const realKey = key.replace(/(_lt)$/, '');
                     items = items.filter((d) => d[realKey] < filter[key]);
                     return;
                 }
                 if (key.indexOf('_gt') !== -1) {
-                    // less than or equal
                     const realKey = key.replace(/(_gt)$/, '');
                     items = items.filter((d) => d[realKey] > filter[key]);
                     return;

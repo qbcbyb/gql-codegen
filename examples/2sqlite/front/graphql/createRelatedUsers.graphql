@@ -1,0 +1,3 @@
+mutation createRelatedUsers($id: ID, $name: String, $orgId: Int, $org: OrgInput) {
+    createRelatedUsers(id: $id, name: $name, orgId: $orgId, org: $org)
+}

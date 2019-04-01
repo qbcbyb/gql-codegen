@@ -1,0 +1,33 @@
+mutation updateRelatedMeetings(
+    $id: ID
+    $meetingTitle: String
+    $meetingTime: Date
+    $meetingType: Int
+    $meetingroomId: Int
+    $organizer: String
+    $sponsor: String
+    $meetingContent: String
+    $notifi: String
+    $warn: String
+    $meetingStatus: String
+    $attachment: Upload
+    $attachments: Upload
+    $meetingroom: MeetingroomInput
+) {
+    updateRelatedMeetings(
+        id: $id
+        meetingTitle: $meetingTitle
+        meetingTime: $meetingTime
+        meetingType: $meetingType
+        meetingroomId: $meetingroomId
+        organizer: $organizer
+        sponsor: $sponsor
+        meetingContent: $meetingContent
+        notifi: $notifi
+        warn: $warn
+        meetingStatus: $meetingStatus
+        attachment: $attachment
+        attachments: $attachments
+        meetingroom: $meetingroom
+    )
+}

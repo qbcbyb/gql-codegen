@@ -1,3 +1,4 @@
+import * as path from 'path';
 import { singularize, camelize, pluralize } from 'inflection';
 import { DataReader } from '../data-reader';
 import { MockDataSource, MockDataEntity } from '../../model/data-source';
@@ -33,6 +34,9 @@ import * as GraphQLJSON from 'graphql-type-json';
 import * as BigInt from 'graphql-bigint';
 
 export class MockDataReader extends DataReader {
+    dataFilePathHandler(dataSource: MockDataSource, dataFilePath: string): string {
+        return dataFilePath;
+    }
     protected async getEntitiesFromDataSource(
         dataSource: MockDataSource,
         relationshipConfig: RelationshipConfig
@@ -124,5 +128,13 @@ export class MockDataReader extends DataReader {
             hasJSON,
             hasFile
         };
+    }
+    getTemplateFromConfig(templateFiles: {
+        mockDataSource?: string | undefined;
+        sqliteDataSource?: string | undefined;
+    }): string {
+        return (
+            templateFiles.mockDataSource || path.join(__dirname, '../../../template/data-source/mock-data-source.tpl')
+        );
     }
 }

@@ -1,0 +1,3 @@
+mutation createOrg($id: ID, $orgName: String, $parentorgId: Int) {
+    createOrg(id: $id, orgName: $orgName, parentorgId: $parentorgId)
+}

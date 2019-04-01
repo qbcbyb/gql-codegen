@@ -12,18 +12,17 @@ import {
     isFieldHasRelation
 } from '../introspection/common-handler';
 
-export function generateDataSource(entities: Entity[], mockFilePath: string, templatePath?: string): string {
-    const template = handlebars.compile(
-        fs.readFileSync(templatePath || path.join(__dirname, '../../template/data-source/data-source.tpl'), 'utf8')
-    );
+export function generateDataSource(entities: Entity[], mockFilePath: string, templatePath: string): string {
+    const template = handlebars.compile(fs.readFileSync(templatePath, 'utf8'));
     let hasFile = false;
+    const entityFieldMap: { [entityKey: string]: { [fieldName: string]: string } } = {};
     const renderEntities: {
         entityKey: string;
         entityName: string;
         hasRelationField: boolean;
         manyToOneFields: ManyToOneField[];
         oneToManyFields: OneToManyField[];
-        manyToManyIdsFields: Field[];
+        manyToManyIdsFields: string;
         uploadFields: Field[];
         uploadListFields: Field[];
     }[] = entities.map((entity) => {
@@ -32,7 +31,8 @@ export function generateDataSource(entities: Entity[], mockFilePath: string, tem
             oneToManyFields: OneToManyField[] = [],
             manyToManyIdsFields: Field[] = [],
             uploadFields: Field[] = [],
-            uploadListFields: Field[] = [];
+            uploadListFields: Field[] = [],
+            fieldMap: { [fieldName: string]: string } = {};
         entity.fields.forEach((field) => {
             if (!!field.type && typeof field.type !== 'string' && isFileType(field.type)) {
                 if (hasGraphQLListType(field.type)) {
@@ -47,18 +47,21 @@ export function generateDataSource(entities: Entity[], mockFilePath: string, tem
                 } else {
                     manyToOneFields.push(field);
                 }
+            } else {
+                fieldMap[field.name] = field.key;
             }
         });
         if (entity.hasTwoRelationField) {
             manyToManyIdsFields.push(...getRelationIdsFromFields(entity.fields, (f) => isFieldHasRelation(f)));
         }
+        entityFieldMap[entity.key] = fieldMap;
         return {
             entityKey: entity.key,
             entityName: entity.name,
             hasRelationField: !!entity.hasRelationField,
             manyToOneFields,
             oneToManyFields,
-            manyToManyIdsFields,
+            manyToManyIdsFields: JSON.stringify(manyToManyIdsFields),
             uploadFields,
             uploadListFields
         };
@@ -66,6 +69,7 @@ export function generateDataSource(entities: Entity[], mockFilePath: string, tem
     return template({
         hasFile,
         mockFilePath,
-        entities: renderEntities
+        entities: renderEntities,
+        entityFieldMap: JSON.stringify(entityFieldMap)
     });
 }

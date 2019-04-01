@@ -46,20 +46,28 @@ module.exports = class {
     }
 
     //----------------start of Meetingroom
-    async allMeetingrooms({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }) {
+    async allMeetingrooms({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
+        console.log(
+            info.path.key,
+            JSON.stringify(info),
+        );
         let items = [...mockData['meetingrooms']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
     }
-    async nonPaginationMeetingrooms({ sortField, sortOrder = 'asc', filter = {} }) {
+    async nonPaginationMeetingrooms({ sortField, sortOrder = 'asc', filter = {} }, info) {
         let items = [...mockData['meetingrooms']];
 
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
-    async meetingroom({ id }) {
+    async meetingroom({ id }, info) {
+        console.log(
+            info.path.key,
+            JSON.stringify(info),
+        );
         return mockData['meetingrooms'].find((d) => d.id == id);
     }
-    async createMeetingroom(entity) {
+    async createMeetingroom(entity, info) {
         const entityData = mockData['meetingrooms'];
         const newId = entityData.length > 0 ? parseInt(entityData[entityData.length - 1].id, 10) + 1 : 0;
         const newEntity = Object.assign({ id: `${newId}` }, entity);
@@ -67,7 +75,7 @@ module.exports = class {
         entityData.push(newEntity);
         return newEntity.id;
     }
-    async batchCreateMeetingrooms({ meetingrooms: entitys }) {
+    async batchCreateMeetingrooms({ meetingrooms: entitys }, info) {
         if (entitys && entitys.length) {
             const created = [];
             try {
@@ -88,7 +96,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async updateMeetingroom(params) {
+    async updateMeetingroom(params, info) {
         const entityData = mockData['meetingrooms'];
         const indexOfEntity = entityData.findIndex((e) => e.id == params.id);
         if (indexOfEntity != -1) {
@@ -98,7 +106,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entity by id: ${params.id}!`);
     }
-    async batchUpdateMeetingrooms({ meetingrooms: entitys }) {
+    async batchUpdateMeetingrooms({ meetingrooms: entitys }, info) {
         if (entitys && entitys.length) {
             const updated = [];
             try {
@@ -123,7 +131,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async removeMeetingroom({ id }) {
+    async removeMeetingroom({ id }, info) {
         const entityData = mockData['meetingrooms'];
         const indexOfEntity = entityData.findIndex((e) => e.id == id);
 
@@ -132,7 +140,7 @@ module.exports = class {
         }
         return indexOfEntity > -1;
     }
-    async batchRemoveMeetingrooms({ meetingroomIds: ids }) {
+    async batchRemoveMeetingrooms({ meetingroomIds: ids }, info) {
         if (ids && ids.length) {
             const removed = [];
             try {
@@ -153,27 +161,31 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find meetingroomIds!`);
     }
-    async getMeetingsOfMeetingroom({ meetingroom }) {
+    async getMeetingsOfMeetingroom({ meetingroom }, info) {
+        console.log(
+            info.path.key,
+            JSON.stringify(info),
+        );
         let result = mockData['meetings'].filter((record) => record['meetingroom_id'] == meetingroom.id);
         return result;
     }
     //----------------end of Meetingroom
 
     //----------------start of Meeting
-    async allMeetings({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }) {
+    async allMeetings({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
         let items = [...mockData['meetings']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
     }
-    async nonPaginationMeetings({ sortField, sortOrder = 'asc', filter = {} }) {
+    async nonPaginationMeetings({ sortField, sortOrder = 'asc', filter = {} }, info) {
         let items = [...mockData['meetings']];
 
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
-    async meeting({ id }) {
+    async meeting({ id }, info) {
         return mockData['meetings'].find((d) => d.id == id);
     }
-    async createRelatedMeetings(entity) {
+    async createRelatedMeetings(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [];
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
@@ -217,7 +229,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async updateRelatedMeetings(entity) {
+    async updateRelatedMeetings(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [];
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
@@ -266,7 +278,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async createMeeting(entity) {
+    async createMeeting(entity, info) {
         const entityData = mockData['meetings'];
         const newId = entityData.length > 0 ? parseInt(entityData[entityData.length - 1].id, 10) + 1 : 0;
         const newEntity = Object.assign({ id: `${newId}` }, entity);
@@ -287,7 +299,7 @@ module.exports = class {
         entityData.push(newEntity);
         return newEntity.id;
     }
-    async batchCreateMeetings({ meetings: entitys }) {
+    async batchCreateMeetings({ meetings: entitys }, info) {
         if (entitys && entitys.length) {
             const created = [];
             try {
@@ -308,7 +320,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async updateMeeting(params) {
+    async updateMeeting(params, info) {
         const entityData = mockData['meetings'];
         const indexOfEntity = entityData.findIndex((e) => e.id == params.id);
         if (indexOfEntity != -1) {
@@ -329,7 +341,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entity by id: ${params.id}!`);
     }
-    async batchUpdateMeetings({ meetings: entitys }) {
+    async batchUpdateMeetings({ meetings: entitys }, info) {
         if (entitys && entitys.length) {
             const updated = [];
             try {
@@ -354,7 +366,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async removeMeeting({ id }) {
+    async removeMeeting({ id }, info) {
         const entityData = mockData['meetings'];
         const indexOfEntity = entityData.findIndex((e) => e.id == id);
 
@@ -363,7 +375,7 @@ module.exports = class {
         }
         return indexOfEntity > -1;
     }
-    async batchRemoveMeetings({ meetingIds: ids }) {
+    async batchRemoveMeetings({ meetingIds: ids }, info) {
         if (ids && ids.length) {
             const removed = [];
             try {
@@ -384,14 +396,14 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find meetingIds!`);
     }
-    async findMeetingroomByMeeting({ meeting }) {
+    async findMeetingroomByMeeting({ meeting }, info) {
         return mockData['meetingrooms'].find((relatedRecord) => relatedRecord.id == meeting['meetingroom_id']);
     }
-    async getMeetingUsersOfMeeting({ meeting }) {
+    async getMeetingUsersOfMeeting({ meeting }, info) {
         let result = mockData['meeting_users'].filter((record) => record['meeting_id'] == meeting.id);
         return result;
     }
-    async getRelatedUsersOfMeeting({ meeting }) {
+    async getRelatedUsersOfMeeting({ meeting }, info) {
         let result = mockData['meeting_users'].filter((record) => record['meeting_id'] == meeting.id);
         result = applyFilters(mockData['users'], { ids: result.map((r) => r.user_id) });
         return result;
@@ -399,20 +411,20 @@ module.exports = class {
     //----------------end of Meeting
 
     //----------------start of MeetingUser
-    async allMeetingUsers({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }) {
+    async allMeetingUsers({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
         let items = [...mockData['meeting_users']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
     }
-    async nonPaginationMeetingUsers({ sortField, sortOrder = 'asc', filter = {} }) {
+    async nonPaginationMeetingUsers({ sortField, sortOrder = 'asc', filter = {} }, info) {
         let items = [...mockData['meeting_users']];
 
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
-    async meetingUser({ id }) {
+    async meetingUser({ id }, info) {
         return mockData['meeting_users'].find((d) => d.id == id);
     }
-    async createRelatedMeetingUsers(entity) {
+    async createRelatedMeetingUsers(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [
             { key: 'meeting_id', name: 'meeting_ids', type: '[ID]' },
@@ -468,7 +480,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async updateRelatedMeetingUsers(entity) {
+    async updateRelatedMeetingUsers(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [
             { key: 'meeting_id', name: 'meeting_ids', type: '[ID]' },
@@ -531,7 +543,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async createMeetingUser(entity) {
+    async createMeetingUser(entity, info) {
         const entityData = mockData['meeting_users'];
         const newId = entityData.length > 0 ? parseInt(entityData[entityData.length - 1].id, 10) + 1 : 0;
         const newEntity = Object.assign({ id: `${newId}` }, entity);
@@ -539,7 +551,7 @@ module.exports = class {
         entityData.push(newEntity);
         return newEntity.id;
     }
-    async batchCreateMeetingUsers({ meetingUsers: entitys }) {
+    async batchCreateMeetingUsers({ meetingUsers: entitys }, info) {
         if (entitys && entitys.length) {
             const created = [];
             try {
@@ -560,7 +572,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async updateMeetingUser(params) {
+    async updateMeetingUser(params, info) {
         const entityData = mockData['meeting_users'];
         const indexOfEntity = entityData.findIndex((e) => e.id == params.id);
         if (indexOfEntity != -1) {
@@ -570,7 +582,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entity by id: ${params.id}!`);
     }
-    async batchUpdateMeetingUsers({ meetingUsers: entitys }) {
+    async batchUpdateMeetingUsers({ meetingUsers: entitys }, info) {
         if (entitys && entitys.length) {
             const updated = [];
             try {
@@ -595,7 +607,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async removeMeetingUser({ id }) {
+    async removeMeetingUser({ id }, info) {
         const entityData = mockData['meeting_users'];
         const indexOfEntity = entityData.findIndex((e) => e.id == id);
 
@@ -604,7 +616,7 @@ module.exports = class {
         }
         return indexOfEntity > -1;
     }
-    async batchRemoveMeetingUsers({ meetingUserIds: ids }) {
+    async batchRemoveMeetingUsers({ meetingUserIds: ids }, info) {
         if (ids && ids.length) {
             const removed = [];
             try {
@@ -625,29 +637,29 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find meetingUserIds!`);
     }
-    async findMeetingByMeetingUser({ meetingUser }) {
+    async findMeetingByMeetingUser({ meetingUser }, info) {
         return mockData['meetings'].find((relatedRecord) => relatedRecord.id == meetingUser['meeting_id']);
     }
-    async findUserByMeetingUser({ meetingUser }) {
+    async findUserByMeetingUser({ meetingUser }, info) {
         return mockData['users'].find((relatedRecord) => relatedRecord.id == meetingUser['user_id']);
     }
     //----------------end of MeetingUser
 
     //----------------start of Org
-    async allOrgs({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }) {
+    async allOrgs({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
         let items = [...mockData['orgs']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
     }
-    async nonPaginationOrgs({ sortField, sortOrder = 'asc', filter = {} }) {
+    async nonPaginationOrgs({ sortField, sortOrder = 'asc', filter = {} }, info) {
         let items = [...mockData['orgs']];
 
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
-    async org({ id }) {
+    async org({ id }, info) {
         return mockData['orgs'].find((d) => d.id == id);
     }
-    async createRelatedOrgs(entity) {
+    async createRelatedOrgs(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [];
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
@@ -691,7 +703,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async updateRelatedOrgs(entity) {
+    async updateRelatedOrgs(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [];
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
@@ -740,7 +752,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async createOrg(entity) {
+    async createOrg(entity, info) {
         const entityData = mockData['orgs'];
         const newId = entityData.length > 0 ? parseInt(entityData[entityData.length - 1].id, 10) + 1 : 0;
         const newEntity = Object.assign({ id: `${newId}` }, entity);
@@ -748,7 +760,7 @@ module.exports = class {
         entityData.push(newEntity);
         return newEntity.id;
     }
-    async batchCreateOrgs({ orgs: entitys }) {
+    async batchCreateOrgs({ orgs: entitys }, info) {
         if (entitys && entitys.length) {
             const created = [];
             try {
@@ -769,7 +781,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async updateOrg(params) {
+    async updateOrg(params, info) {
         const entityData = mockData['orgs'];
         const indexOfEntity = entityData.findIndex((e) => e.id == params.id);
         if (indexOfEntity != -1) {
@@ -779,7 +791,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entity by id: ${params.id}!`);
     }
-    async batchUpdateOrgs({ orgs: entitys }) {
+    async batchUpdateOrgs({ orgs: entitys }, info) {
         if (entitys && entitys.length) {
             const updated = [];
             try {
@@ -804,7 +816,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async removeOrg({ id }) {
+    async removeOrg({ id }, info) {
         const entityData = mockData['orgs'];
         const indexOfEntity = entityData.findIndex((e) => e.id == id);
 
@@ -813,7 +825,7 @@ module.exports = class {
         }
         return indexOfEntity > -1;
     }
-    async batchRemoveOrgs({ orgIds: ids }) {
+    async batchRemoveOrgs({ orgIds: ids }, info) {
         if (ids && ids.length) {
             const removed = [];
             try {
@@ -834,34 +846,34 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find orgIds!`);
     }
-    async findParentOrgByOrg({ org }) {
+    async findParentOrgByOrg({ org }, info) {
         return mockData['orgs'].find((relatedRecord) => relatedRecord.id == org['parentOrg_id']);
     }
-    async getSubOrgsOfOrg({ org }) {
+    async getSubOrgsOfOrg({ org }, info) {
         let result = mockData['orgs'].filter((record) => record['parentOrg_id'] == org.id);
         return result;
     }
-    async getUsersOfOrg({ org }) {
+    async getUsersOfOrg({ org }, info) {
         let result = mockData['users'].filter((record) => record['org_id'] == org.id);
         return result;
     }
     //----------------end of Org
 
     //----------------start of User
-    async allUsers({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }) {
+    async allUsers({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
         let items = [...mockData['users']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
     }
-    async nonPaginationUsers({ sortField, sortOrder = 'asc', filter = {} }) {
+    async nonPaginationUsers({ sortField, sortOrder = 'asc', filter = {} }, info) {
         let items = [...mockData['users']];
 
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
-    async user({ id }) {
+    async user({ id }, info) {
         return mockData['users'].find((d) => d.id == id);
     }
-    async createRelatedUsers(entity) {
+    async createRelatedUsers(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [];
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
@@ -905,7 +917,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async updateRelatedUsers(entity) {
+    async updateRelatedUsers(entity, info) {
         const keys = Object.keys(entity);
         const manyToManyIdsFields = [];
         const manyFields = manyToManyIdsFields.filter(({ name }) => keys.includes(name));
@@ -954,7 +966,7 @@ module.exports = class {
             return await Promise.all(promiseArr);
         }
     }
-    async createUser(entity) {
+    async createUser(entity, info) {
         const entityData = mockData['users'];
         const newId = entityData.length > 0 ? parseInt(entityData[entityData.length - 1].id, 10) + 1 : 0;
         const newEntity = Object.assign({ id: `${newId}` }, entity);
@@ -962,7 +974,7 @@ module.exports = class {
         entityData.push(newEntity);
         return newEntity.id;
     }
-    async batchCreateUsers({ users: entitys }) {
+    async batchCreateUsers({ users: entitys }, info) {
         if (entitys && entitys.length) {
             const created = [];
             try {
@@ -983,7 +995,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async updateUser(params) {
+    async updateUser(params, info) {
         const entityData = mockData['users'];
         const indexOfEntity = entityData.findIndex((e) => e.id == params.id);
         if (indexOfEntity != -1) {
@@ -993,7 +1005,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entity by id: ${params.id}!`);
     }
-    async batchUpdateUsers({ users: entitys }) {
+    async batchUpdateUsers({ users: entitys }, info) {
         if (entitys && entitys.length) {
             const updated = [];
             try {
@@ -1018,7 +1030,7 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find entitys!`);
     }
-    async removeUser({ id }) {
+    async removeUser({ id }, info) {
         const entityData = mockData['users'];
         const indexOfEntity = entityData.findIndex((e) => e.id == id);
 
@@ -1027,7 +1039,7 @@ module.exports = class {
         }
         return indexOfEntity > -1;
     }
-    async batchRemoveUsers({ userIds: ids }) {
+    async batchRemoveUsers({ userIds: ids }, info) {
         if (ids && ids.length) {
             const removed = [];
             try {
@@ -1048,14 +1060,14 @@ module.exports = class {
         }
         throw new ApolloError(`Can not find userIds!`);
     }
-    async findOrgByUser({ user }) {
+    async findOrgByUser({ user }, info) {
         return mockData['orgs'].find((relatedRecord) => relatedRecord.id == user['org_id']);
     }
-    async getMeetingUsersOfUser({ user }) {
+    async getMeetingUsersOfUser({ user }, info) {
         let result = mockData['meeting_users'].filter((record) => record['user_id'] == user.id);
         return result;
     }
-    async getRelatedMeetingsOfUser({ user }) {
+    async getRelatedMeetingsOfUser({ user }, info) {
         let result = mockData['meeting_users'].filter((record) => record['user_id'] == user.id);
         result = applyFilters(mockData['meetings'], { ids: result.map((r) => r.meeting_id) });
         return result;

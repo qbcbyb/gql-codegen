@@ -1,0 +1,3 @@
+mutation batchCreateMeetingrooms($meetingrooms: [MeetingroomInput]) {
+    batchCreateMeetingrooms(meetingrooms: $meetingrooms)
+}

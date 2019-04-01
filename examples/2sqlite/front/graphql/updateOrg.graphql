@@ -1,0 +1,3 @@
+mutation updateOrg($id: ID, $orgName: String, $parentorgId: Int) {
+    updateOrg(id: $id, orgName: $orgName, parentorgId: $parentorgId)
+}
