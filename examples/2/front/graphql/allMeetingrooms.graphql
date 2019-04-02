@@ -44,70 +44,16 @@ query allMeetingrooms($page: Int, $perPage: Int, $sortField: String, $sortOrder:
                     facility
                     photos
                     status
-                    meetings {
-                        id
-                        meeting_title
-                        meeting_time
-                        meeting_type
-                        meetingroom_id
-                        organizer
-                        sponsor
-                        meeting_content
-                        notifi
-                        warn
-                        meeting_status
-                    }
                 }
                 meetingUsers {
                     id
                     meeting_id
                     user_id
-                    meeting {
-                        id
-                        meeting_title
-                        meeting_time
-                        meeting_type
-                        meetingroom_id
-                        organizer
-                        sponsor
-                        meeting_content
-                        notifi
-                        warn
-                        meeting_status
-                    }
-                    user {
-                        id
-                        name
-                        org_id
-                    }
                 }
                 relatedUsers {
                     id
                     name
                     org_id
-                    meetingUsers {
-                        id
-                        meeting_id
-                        user_id
-                    }
-                    relatedMeetings {
-                        id
-                        meeting_title
-                        meeting_time
-                        meeting_type
-                        meetingroom_id
-                        organizer
-                        sponsor
-                        meeting_content
-                        notifi
-                        warn
-                        meeting_status
-                    }
-                    org {
-                        id
-                        org_name
-                        parentOrg_id
-                    }
                 }
             }
         }

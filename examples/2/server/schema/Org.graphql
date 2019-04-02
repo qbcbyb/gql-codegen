@@ -1,0 +1,30 @@
+# import * from 'User.graphql'
+
+type Org {
+    id: ID!
+    org_name: String
+    parentOrg_id: ID
+    parentOrg: Org
+    subOrgs: [Org]
+    users: [User]
+}
+
+input OrgFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    org_name: String
+    parentOrg_id: ID
+}
+
+type OrgPage {
+    list: [Org]
+    total: Int
+    pages: Int
+}
+
+input OrgInput {
+    id: ID
+    org_name: String
+    parentOrg_id: ID
+}

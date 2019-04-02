@@ -1,0 +1,7 @@
+type File {
+    id: ID
+    fileName: String
+    fullPath: String
+    thumbnail: String
+    mimetype: String
+}

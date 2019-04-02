@@ -47,10 +47,6 @@ module.exports = class {
 
     //----------------start of Meetingroom
     async allMeetingrooms({ sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }, info) {
-        console.log(
-            info.path.key,
-            JSON.stringify(info),
-        );
         let items = [...mockData['meetingrooms']];
 
         return this.filter(items, { sortField, sortOrder, page, perPage, filter });
@@ -61,10 +57,6 @@ module.exports = class {
         return this.filter(items, { sortField, sortOrder, page: null, perPage: null, filter }).list;
     }
     async meetingroom({ id }, info) {
-        console.log(
-            info.path.key,
-            JSON.stringify(info),
-        );
         return mockData['meetingrooms'].find((d) => d.id == id);
     }
     async createMeetingroom(entity, info) {
@@ -162,10 +154,6 @@ module.exports = class {
         throw new ApolloError(`Can not find meetingroomIds!`);
     }
     async getMeetingsOfMeetingroom({ meetingroom }, info) {
-        console.log(
-            info.path.key,
-            JSON.stringify(info),
-        );
         let result = mockData['meetings'].filter((record) => record['meetingroom_id'] == meetingroom.id);
         return result;
     }

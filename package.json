@@ -1,12 +1,12 @@
 {
     "name": "gql-codegen",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Generate GraphQL code by mock.js or sqlite",
     "main": "lib/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "watch": "tsc --watch --sourceMap",
-        "prepublish": "rm -rf lib && tsc"
+        "prepublishOnly": "rm -rf lib && tsc"
     },
     "publishConfig": {
         "registry": "http://registry.npmjs.org"

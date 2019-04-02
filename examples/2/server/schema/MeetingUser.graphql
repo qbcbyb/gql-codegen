@@ -1,0 +1,30 @@
+# import * from 'Meeting.graphql'
+# import * from 'User.graphql'
+
+type MeetingUser {
+    id: ID!
+    meeting_id: ID
+    user_id: ID
+    meeting: Meeting
+    user: User
+}
+
+input MeetingUserFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    meeting_id: ID
+    user_id: ID
+}
+
+type MeetingUserPage {
+    list: [MeetingUser]
+    total: Int
+    pages: Int
+}
+
+input MeetingUserInput {
+    id: ID
+    meeting_id: ID
+    user_id: ID
+}

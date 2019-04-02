@@ -1,17 +1,16 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import * as mkdirp from 'mkdirp';
-import { printSchema } from 'graphql';
 import * as prettier from 'prettier';
 import prettierConfig from './prettierrc';
-import { pluralize, camelize, singularize } from 'inflection';
+import { camelize } from 'inflection';
 import { parseSourceData } from './introspection/data-handler';
-import { getNamedEntityMap } from './introspection/common-handler';
 import { generateConfig } from './config';
 import { generateResolver } from './resolver';
 import { generateDataSource } from './data-source';
 import { generateFront } from './front';
 import handlebars from './handlebars';
+import { generateSchema } from './schema';
 
 const encoding = 'utf8';
 
@@ -104,14 +103,10 @@ export const generateCodeFromData = async function(
     ['graphql'].forEach(mkdirIfNeeded(frontendDir));
 
     //生成schema
-    fs.writeFileSync(
-        path.join(serverDir, `schema/schema.graphql`),
-        prettier.format(printSchema(graphqlSchema), {
-            ...prettierConfig,
-            parser: 'graphql'
-        }),
-        encoding
-    );
+    generateSchema(path.join(serverDir, 'schema'), graphqlSchema, {
+        ...prettierConfig,
+        parser: 'graphql'
+    });
 
     //在resolver目录下生成默认index.js
     const resolverIndexFile = path.join(serverDir, 'resolver/index.js');
@@ -119,11 +114,12 @@ export const generateCodeFromData = async function(
         fs.copyFileSync(path.join(__dirname, '../template/server/resolver.template.js'), resolverIndexFile);
     }
     //生成 resolver
-    fs.writeFileSync(
-        path.join(serverDir, `resolver/${fileName}.resolver.js`),
-        prettier.format(generateResolver(entities, templateFiles.resolver), prettierConfig),
-        encoding
-    );
+    generateResolver(path.join(serverDir, `resolver`), entities, prettierConfig, templateFiles.resolver);
+    // fs.writeFileSync(
+    //     path.join(serverDir, `resolver/${fileName}.resolver.js`),
+    //     prettier.format(generateResolver(entities, templateFiles.resolver), prettierConfig),
+    //     encoding
+    // );
 
     //生成dataSource
     fs.writeFileSync(

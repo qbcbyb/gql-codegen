@@ -1,0 +1,43 @@
+# import * from 'Meeting.graphql'
+
+type Meetingroom {
+    id: ID!
+    room_name: String
+    area: String
+    capacity: String
+    room_address: String
+    facility: [String]
+    photos: [String]
+    status: Boolean
+    meetings: [Meeting]
+}
+
+input MeetingroomFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    room_name: String
+    area: String
+    capacity: String
+    room_address: String
+    facility: [String]
+    photos: [String]
+    status: Boolean
+}
+
+type MeetingroomPage {
+    list: [Meetingroom]
+    total: Int
+    pages: Int
+}
+
+input MeetingroomInput {
+    id: ID
+    room_name: String
+    area: String
+    capacity: String
+    room_address: String
+    facility: [String]
+    photos: [String]
+    status: Boolean
+}

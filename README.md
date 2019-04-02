@@ -2,13 +2,13 @@
 
 Generate GraphQL code by mock.js or sqlite, Inspire by [json-graphql-server](https://github.com/marmelab/json-graphql-server)
 
-## install
+## Install
 
 ```
 $ npm install gql-codegen -g
 ```
 
-## generate from mock data use cli
+## Generate from mock data use cli
 
 ```
 $ gql-codegen data2.js
@@ -24,7 +24,7 @@ and modify examples/2/config.js, then:
 $ gql-codegen examples/data2.js -c examples/2/config.js
 ```
 
-## generate use Node.js
+## Generate use Node.js
 
 ```
 const { generateCodeFromData } = require("gql-codegen");
@@ -50,7 +50,7 @@ const { generateCodeFromData } = require("gql-codegen");
 generateCodeFromData(...);
 ```
 
-## examples
+## Examples
 
 `$ gql-codegen examples/data2.js --configSample examples/2/config.js`
 **->** 
@@ -61,6 +61,10 @@ generateCodeFromData(...);
 **->**
 `examples/2/front/*`,`examples/2/server/*`
 
-## add generate from sqlite on version: 0.0.2+
+## Add generate from sqlite on version: 0.0.2+
 
 See `examples/data2sqlite.js`, `examples/data2.db`, `examples/2sqlite/*`
+
+## Generate schema and resolver as split files on version: 0.0.6+
+
+See `examples/2/server/schema/*`, `examples/2/server/resolver/*`

@@ -1,0 +1,32 @@
+# import * from 'MeetingUser.graphql'
+# import * from 'Meeting.graphql'
+# import * from 'Org.graphql'
+
+type User {
+    id: ID!
+    name: String
+    org_id: ID
+    meetingUsers: [MeetingUser]
+    relatedMeetings: [Meeting]
+    org: Org
+}
+
+input UserFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    name: String
+    org_id: ID
+}
+
+type UserPage {
+    list: [User]
+    total: Int
+    pages: Int
+}
+
+input UserInput {
+    id: ID
+    name: String
+    org_id: ID
+}

@@ -1,0 +1,71 @@
+# import * from 'File.graphql'
+# import * from 'Meetingroom.graphql'
+# import * from 'MeetingUser.graphql'
+# import * from 'User.graphql'
+
+type Meeting {
+    id: ID!
+    meeting_title: String
+    meeting_time: Date
+    meeting_type: Int
+    meetingroom_id: ID
+    organizer: String
+    sponsor: String
+    meeting_content: String
+    notifi: [String]
+    warn: [String]
+    meeting_status: String
+    attachment: File
+    attachments: [File]
+    meetingroom: Meetingroom
+    meetingUsers: [MeetingUser]
+    relatedUsers: [User]
+}
+
+input MeetingFilter {
+    q: String
+    ids: [ID]
+    id: ID
+    meeting_title: String
+    meeting_time: Date
+    meeting_type: Int
+    meetingroom_id: ID
+    organizer: String
+    sponsor: String
+    meeting_content: String
+    notifi: [String]
+    warn: [String]
+    meeting_status: String
+    attachment: Upload
+    attachments: [Upload]
+    meeting_time_lt: Date
+    meeting_time_lte: Date
+    meeting_time_gt: Date
+    meeting_time_gte: Date
+    meeting_type_lt: Int
+    meeting_type_lte: Int
+    meeting_type_gt: Int
+    meeting_type_gte: Int
+}
+
+type MeetingPage {
+    list: [Meeting]
+    total: Int
+    pages: Int
+}
+
+input MeetingInput {
+    id: ID
+    meeting_title: String
+    meeting_time: Date
+    meeting_type: Int
+    meetingroom_id: ID
+    organizer: String
+    sponsor: String
+    meeting_content: String
+    notifi: [String]
+    warn: [String]
+    meeting_status: String
+    attachment: Upload
+    attachments: [Upload]
+}
