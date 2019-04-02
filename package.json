@@ -24,8 +24,7 @@
     "files": [
         "*.md",
         "lib",
-        "template",
-        ".prettierrc.js"
+        "template"
     ],
     "bin": {
         "gql-codegen": "lib/cmd.js"
