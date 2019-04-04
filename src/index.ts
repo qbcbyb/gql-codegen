@@ -11,6 +11,7 @@ import { generateDataSource } from './data-source';
 import { generateFront } from './front';
 import handlebars from './handlebars';
 import { generateSchema } from './schema';
+import { EntitiesWithSchema } from './model/entities-with-schema';
 
 const encoding = 'utf8';
 
@@ -30,6 +31,17 @@ const mkdirIfNeeded = (parentDir) => (dir) => {
 export { FileType, File, DateType } from './introspection/ex-graphql-type';
 
 export { applyFilters } from './data-source/applyFilters';
+
+export async function getEntitiesAndSchemaFromData(dataFilePath: string = ''): Promise<EntitiesWithSchema> {
+    dataFilePath = resolvePath(dataFilePath);
+    if (!fs.existsSync(dataFilePath) || !fs.statSync(dataFilePath).isFile()) {
+        throw new Error('No json data file found');
+    }
+    const data = require(dataFilePath);
+    const relationshipConfig = data.__relationships || {};
+    delete data.__relationships;
+    return await parseSourceData(data, relationshipConfig);
+}
 
 export const generateCodeFromData = async function(
     dataFilePath: string = '',
