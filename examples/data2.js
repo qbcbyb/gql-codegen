@@ -1,4 +1,4 @@
-const { File } = require('../lib');
+const { File } = require('gql-codegen');
 module.exports = {
     __relationships: {
         meetings: {

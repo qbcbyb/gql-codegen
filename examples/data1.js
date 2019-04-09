@@ -1,4 +1,4 @@
-const { File } = require('../src');
+const { File } = require('gql-codegen');
 
 module.exports = {
     __relationships: {
@@ -8,9 +8,9 @@ module.exports = {
         commands: {
             customer_id: 'customers'
         },
-        reviews:{
-            command_id:'commands',
-            product_id:'products',
+        reviews: {
+            command_id: 'commands',
+            product_id: 'products',
             customer_id: 'customers'
         }
     },

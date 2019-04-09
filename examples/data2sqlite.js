@@ -1,4 +1,3 @@
-const { File } = require('../lib');
 module.exports = {
     __relationships: {
         meeting: {
