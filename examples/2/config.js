@@ -60,46 +60,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -118,84 +83,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -206,32 +106,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -245,75 +121,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 }
@@ -368,93 +188,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 },
@@ -522,46 +271,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -580,84 +294,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -668,32 +317,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -707,75 +332,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 }
@@ -855,93 +424,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 },
@@ -984,93 +482,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     user: {
@@ -1081,32 +508,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -1120,75 +523,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -1212,84 +559,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -1327,93 +609,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -1424,97 +635,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 }
@@ -1572,46 +711,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -1630,84 +734,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -1718,32 +757,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -1757,75 +772,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -1907,93 +866,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 },
@@ -2036,93 +924,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     user: {
@@ -2133,32 +950,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -2172,75 +965,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -2264,84 +1001,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -2379,93 +1051,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -2476,97 +1077,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 }
@@ -2627,46 +1156,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -2685,84 +1179,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -2773,32 +1202,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -2812,75 +1217,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -2904,84 +1253,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -3019,93 +1303,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -3116,97 +1329,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 }
@@ -3256,93 +1397,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     user: {
@@ -3353,32 +1423,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -3392,75 +1438,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -3523,46 +1513,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -3581,84 +1536,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -3669,32 +1559,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -3708,75 +1574,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -3800,84 +1610,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -3915,93 +1660,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -4012,97 +1686,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 }
@@ -4128,97 +1730,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -4229,97 +1759,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -4330,32 +1788,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -4369,75 +1803,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -4453,97 +1831,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -4554,97 +1860,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -4655,32 +1889,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -4694,75 +1904,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -4786,84 +1940,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -4901,93 +1990,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -4998,97 +2016,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 }
@@ -5111,97 +2057,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -5212,97 +2086,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -5313,32 +2115,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -5352,75 +2130,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -5448,97 +2170,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -5549,97 +2199,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -5650,32 +2228,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -5689,75 +2243,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -5773,97 +2271,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -5874,97 +2300,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -5975,32 +2329,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -6014,75 +2344,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -6106,84 +2380,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -6221,93 +2430,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -6318,97 +2456,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 }
@@ -6461,93 +2527,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     user: {
@@ -6558,32 +2553,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -6597,75 +2568,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -6716,46 +2631,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -6774,84 +2654,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -6862,32 +2677,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -6901,75 +2692,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -6985,97 +2720,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -7086,97 +2749,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -7187,32 +2778,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -7226,75 +2793,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 }
@@ -7325,84 +2836,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedMeetings: {
@@ -7440,93 +2886,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     org: {
@@ -7537,97 +2912,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     }
                 },
@@ -7682,93 +2985,22 @@ module.exports = {
                             facility: {},
                             photos: {},
                             status: {},
-                            meetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            }
+                            meetings: {}
                         },
                         meetingUsers: {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedUsers: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     user: {
@@ -7779,32 +3011,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -7818,75 +3026,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -7937,46 +3089,11 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         }
                     },
                     meetingUsers: {
@@ -7995,84 +3112,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         user: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     relatedUsers: {
@@ -8083,32 +3135,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -8122,75 +3150,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 },
@@ -8206,97 +3178,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     subOrgs: {
@@ -8307,97 +3207,25 @@ module.exports = {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         subOrgs: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         },
                         users: {
                             id: {},
                             name: {},
                             org_id: {},
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedMeetings: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            org: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            }
+                            meetingUsers: {},
+                            relatedMeetings: {},
+                            org: {}
                         }
                     },
                     users: {
@@ -8408,32 +3236,8 @@ module.exports = {
                             id: {},
                             meeting_id: {},
                             user_id: {},
-                            meeting: {
-                                id: {},
-                                meeting_title: {},
-                                meeting_time: {},
-                                meeting_type: {},
-                                meetingroom_id: {},
-                                organizer: {},
-                                sponsor: {},
-                                meeting_content: {},
-                                notifi: {},
-                                warn: {},
-                                meeting_status: {},
-                                attachment: {},
-                                attachments: {},
-                                meetingroom: {},
-                                meetingUsers: {},
-                                relatedUsers: {}
-                            },
-                            user: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            meeting: {},
+                            user: {}
                         },
                         relatedMeetings: {
                             id: {},
@@ -8447,75 +3251,19 @@ module.exports = {
                             notifi: {},
                             warn: {},
                             meeting_status: {},
-                            attachment: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            attachments: {
-                                id: {},
-                                fileName: {},
-                                fullPath: {},
-                                thumbnail: {},
-                                mimetype: {}
-                            },
-                            meetingroom: {
-                                id: {},
-                                room_name: {},
-                                area: {},
-                                capacity: {},
-                                room_address: {},
-                                facility: {},
-                                photos: {},
-                                status: {},
-                                meetings: {}
-                            },
-                            meetingUsers: {
-                                id: {},
-                                meeting_id: {},
-                                user_id: {},
-                                meeting: {},
-                                user: {}
-                            },
-                            relatedUsers: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            attachment: {},
+                            attachments: {},
+                            meetingroom: {},
+                            meetingUsers: {},
+                            relatedUsers: {}
                         },
                         org: {
                             id: {},
                             org_name: {},
                             parentOrg_id: {},
-                            parentOrg: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            subOrgs: {
-                                id: {},
-                                org_name: {},
-                                parentOrg_id: {},
-                                parentOrg: {},
-                                subOrgs: {},
-                                users: {}
-                            },
-                            users: {
-                                id: {},
-                                name: {},
-                                org_id: {},
-                                meetingUsers: {},
-                                relatedMeetings: {},
-                                org: {}
-                            }
+                            parentOrg: {},
+                            subOrgs: {},
+                            users: {}
                         }
                     }
                 }

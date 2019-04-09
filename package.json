@@ -9,7 +9,7 @@
         "prepublishOnly": "rm -rf lib && tsc"
     },
     "publishConfig": {
-        "registry": "http://registry.npmjs.org"
+        "registry": "http://registry.npmjs.org/:_authToken=${NPM_TOKEN}"
     },
     "repository": {
         "type": "git",

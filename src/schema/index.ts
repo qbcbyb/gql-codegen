@@ -57,7 +57,7 @@ export function generateSchema(schemaDir: string, schema: GraphQLSchema, prettie
     });
     Object.keys(fileMap).forEach((fileName) => {
         const fileContent = fileMap[fileName];
-        if (fileContent.imports.size && fileContent.contents.length) {
+        if (fileContent.imports.size || fileContent.contents.length) {
             const fileData = Array.from(fileContent.imports)
                 .join('\n')
                 .concat('\n\n')
