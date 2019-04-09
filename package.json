@@ -1,6 +1,6 @@
 {
     "name": "gql-codegen",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Generate GraphQL code by mock.js or sqlite",
     "main": "lib/index.js",
     "scripts": {
