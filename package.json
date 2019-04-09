@@ -8,9 +8,6 @@
         "watch": "tsc --watch --sourceMap",
         "prepublishOnly": "rm -rf lib && tsc"
     },
-    "publishConfig": {
-        "registry": "http://registry.npmjs.org/:_authToken=${NPM_TOKEN}"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/qbcbyb/gql-codegen.git"
