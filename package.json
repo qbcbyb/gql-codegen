@@ -49,6 +49,6 @@
         "handlebars": "^4.0.12",
         "inflection": "^1.12.0",
         "mkdirp": "^0.5.1",
-        "prettier": "^1.15.2"
+        "prettier": "1.17.1"
     }
 }
