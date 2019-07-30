@@ -8,7 +8,7 @@ const { makeExecutableSchema } = require('graphql-tools');
 const typeDefs = importSchema(path.join(__dirname, './schema/schema.graphql'));
 const resolvers = require('./resolver');
 
-const port = 8090;
+const port = parseInt(process.env.SERVICE_PORT || '8090');
 const nonProduction = process.env.NODE_ENV !== 'production';
 
 // Initialize the app
